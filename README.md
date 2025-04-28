@@ -13,7 +13,7 @@
 ## **Objetivos do projeto:**
 
 1. Falar um pouco melhor sobre mim e transmitir isso com o meu tema.
-2. Criar uma plataforma interativa para que os usuários se engajem com esses temas de forma divertida e reflexiva.
+2. Criar uma plataforma interativa para que os usuários se engajem com esse tema de forma divertida e reflexiva.
 3. Promover uma experiência imersiva que combine entretenimento e aprendizado.
 
 ## **Tecnologias utilizadas:**
