@@ -1,5 +1,5 @@
 # Projeto-Individual
-# **Projeto Steven Universo** 🌟
+# **Projeto QuikGem** 🌟
 
 ## **Sobre o projeto:**
 
