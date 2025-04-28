@@ -3,7 +3,7 @@
 
 ## **Sobre o projeto:**
 
-- Bem-vindo a QuikGem! Aqui, vou mostrar como o desenho animado Steven Universe se conectam com a minha vida. 
+- Bem-vindo a QuikGem! Aqui, vou mostrar como o desenho animado Steven Universe se conecta com a minha vida. 
 
 ## **Funcionalidades:**
 
