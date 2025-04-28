@@ -3,9 +3,7 @@
 
 ## **Sobre o projeto:**
 
-Bem-vindo a QuikGem! Aqui, vou mostrar como Steven, sua família e suas aventuras se conectam com a minha vida. Quer embarcar nessa jornada comigo?
-Este projeto tem como objetivo conectar os temas da série *Steven Universe* com aspectos da minha vida pessoal. 
-
+- Bem-vindo a QuikGem! Aqui, vou mostrar como o desenho animado Steven Universe se conectam com a minha vida. 
 
 ## **Funcionalidades:**
 
