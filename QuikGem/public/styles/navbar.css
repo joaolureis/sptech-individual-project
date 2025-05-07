@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     position: fixed;  /*Deixa a nav fixa*/
-    width: 90%;
+    width: 100%;
     z-index: 1;
     height: 90px;
     padding-left: 5%;

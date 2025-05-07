@@ -2,7 +2,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
     text-decoration: none;
 }
 
@@ -12,10 +12,17 @@
     font-style: normal;
 }
 
+
+
 /*----HOME 1----*/
 
+html, body {
+  width: 100%;
+  margin: 0; padding: 0;
+}
+
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* a transição entre as seções seria feita de forma suave */
   }
   
   body {
@@ -38,18 +45,15 @@ html {
 
 
   .banner {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 80%;
-  }
-
-  .banner #container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    height: 85.6%; 
+    overflow: hidden; /*Garante que nada ultrapasse visualmente a área do banner.*/
+  
+ 
   }
 
   
@@ -65,7 +69,7 @@ html {
   .banner .container2 {
     position: absolute;
     right: 50px;
-    bottom: 30px;
+    bottom: 0px;
    display: flex;
    align-items: flex-end;
    justify-content: flex-end;
@@ -73,9 +77,177 @@ html {
   } 
 
  .banner .container2 img {
+    bottom: 10px;
     width: 60%;
     object-fit: contain; /* Garante que as imagens dentro do container não sejam distorcidas*/
  }
+
+
+
+ /*-----Boas Vindas!-----*/
+
+ .boas-vindas {
+  background-color: rgba(255, 255, 247, 1);
+  display: flex;
+  width: 100%;
+  height: 600px;
+}
+
+.boas-vindas .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.boas-vindas .container .texto {
+  margin-left: 80px;
+  margin-right: 100px;
+  align-items: center;
+}
+
+.boas-vindas .container .texto h1 {
+  color: rgba(240, 83, 30, 1);
+  font-size: 46px;
+  font-weight: 700;
+  padding-bottom: 25px;
+  width: 400px;
+
+}
+
+.boas-vindas .container .texto p {
+  color: #000000;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.boas-vindas .container .texto button {
+  background: linear-gradient(to bottom, rgba(113, 75, 178, 1), rgba(113, 75, 178, 1),rgba(113, 75, 178, 1),rgba(96, 105, 188, 1), rgba(88, 119, 193, 1),rgba(78, 136, 199, 1)) ;
+  border: none;
+  margin-top: 25px;
+  width: 120px;
+  height: 45px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.boas-vindas .container .texto button a{
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.boas-vindas .container .imagem{
+  padding-left: 40px;
+}
+
+.boas-vindas .container img{
+  border-radius: 4%;
+}
+
+
+
+/*------CONTEXTO------*/
+
+.contexto {
+  background-color: rgba(24, 77, 135, 1);
+  display: flex;
+  width: 100%;
+  height: 600px;
+}
+
+.contexto .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contexto .container .texto {
+  margin-left: 80px;
+  margin-right: 100px;
+  align-items: center;
+}
+
+.contexto .container .texto h1 {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 700;
+  padding-bottom: 25px;
+  width: 400px;
+
+}
+
+.contexto .container .texto p {
+  color: #ffffff;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-top: 4%;
+}
+
+.contexto .container .imagem {
+  display: flex;
+  width: 100%;
+  height: 100%; 
+  overflow: hidden; 
+}
+
+/*-------HISTORIA X DESENVOLVEDOR--------*/
+
+.historia{
+  background-color: rgba(255, 255, 247, 1);
+  display: flex;
+  width: 100%;
+  height: 600px;
+}
+
+.historia {
+  background-color: rgba(255, 255, 247, 1);
+  display: flex;
+  width: 100%;
+  height: 600px;
+}
+
+.historia .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.historia .container .texto {
+  margin-left: 80px;
+  margin-right: 100px;
+  align-items: center;
+}
+
+.historia .container .texto h1 {
+  color: rgba(240, 83, 30, 1);
+  font-size: 44px;
+  font-weight: 700;
+  padding-bottom: 25px;
+  width: 600px;
+
+}
+
+.historia .container .texto p {
+  color: #000000;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+
+.historia .container .imagem{
+  padding-left: 40px;
+}
+
+
+
+
+
+
 
   
 
