@@ -30,12 +30,12 @@
                     <button onclick="analisar(event)" class="botao">Login</button>
                 </div>
                 <div class="cad-login">
-                    <br><span>Não tem uma conta?<a href="./cadastro.html">Cadastre aqui!</a></span> 
+                    <br><span>Não tem uma conta<a href="./cadastro.html">? Cadastre aqui!</a></span> 
                     <span><a href="./index.html">Sair</a></span>
                 </div>
             </div>
              <div class="container2">
-                <img src="./public/assets/imgs/Contexto.png" alt="">
+                <img src="./public/assets/imgs/gradiente.png" alt="">
             </div>
         </div>
     </section>
@@ -44,3 +44,27 @@
     <div id="div_mensagem"></div>
 </body>
 </html>
+
+<!-- JAVA SCRIPT -->
+<script>
+    function analisar(event) {
+        event.preventDefault(); // Impede o recarregamento da página
+
+        var email = input_email.value;
+        var senha = input_senha.value;
+
+        if (email == "" || senha == "") {
+            alert(`Preencha todos os campos obrigatórios`)
+
+        } else if (!email.includes("@")) {
+            alert(`Preencha um E-mail válido`)
+
+        } else {
+            alert(`Login - Realizado com Sucesso!`)
+
+            window.location.href = "./login.html"; //faz a navegação automática
+
+        }
+    }
+
+</script>

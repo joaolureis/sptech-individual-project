@@ -10,7 +10,7 @@ html {
     position: fixed;  /*Deixa a nav fixa*/
     width: 100%;
     z-index: 1;
-    height: 90px;
+    height: 80px;
     padding-left: 5%;
     padding-right: 5%;
     background: linear-gradient(rgba(82, 47, 140, 1), rgba(82, 47, 140, 1),rgba(82, 47, 140, 1));
@@ -18,7 +18,7 @@ html {
   }
 
   .header .container img{
-    width: 100px; 
+    width: 90px; 
     height: auto;
   }
 
