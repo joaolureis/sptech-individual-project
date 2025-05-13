@@ -19,10 +19,11 @@
 html, body {
   width: 100%;
   margin: 0; padding: 0;
+  
 }
 
 html {
-    scroll-behavior: smooth; /* a transição entre as seções seria feita de forma suave */
+  scroll-behavior: smooth; /* a transição entre as seções seria feita de forma suave */
   }
   
   body {
