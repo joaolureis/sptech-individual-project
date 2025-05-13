@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/styles/cadastro.css">
+    <link rel="icon" href="./public/assets/imgs/LOGO (1).png">
+
+    <title>Cadastro - QuikGem</title>
+</head>
+
+<body>
+    
+    <section class="container-cadastro">
+        <div class="card"> <!-- estou criando aqui o balão de cadastro -->
+            <div class="container2">
+                <img src="./public/assets/imgs/Contexto.png" alt="">
+            </div>
+            <div class="card-campo">
+                <div class="imagem">
+                    <img src="./public/assets/imgs/LOGO (1).png" alt="Logo QuikGem" width="80px"><br><br>
+                </div>
+                <h2>Cadastro</h2><br>
+                <div class="campo">
+                    <span>Nome</span>
+                    <br><br>
+                    <input type="text" id="input_nome"> <br><br>
+                </div>
+                <div class="campo">
+                    <span>E-mail</span>
+                    <br><br>
+                    <input type="text" id="input_email"> <br><br>
+                </div>
+                <div class="campo">
+                    <span>Senha</span>
+                    <br><br>
+                    <input type="text" id="input_senha"> <br><br>
+                </div>
+                <div class="campo">
+                    <span>Confirme a senha</span>
+                    <br><br>
+                    <input type="text" id="input_confirmação"> <br><br>
+                </div>
+                <div class="descricao">
+                    <span>Precisa conter até 8 caracteres</span> <br><br>
+                </div>
+                <div class="confbotao">
+                    <button onclick="analisar(event)" class="botao">Criar Conta</button>
+                </div>
+                <div class="cad-login">
+                    <br><span>Já tem conta?<a href="./login.html">Login</a></span> 
+                    <span><a href="./index.html">Sair</a></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+
+    <div id="div_mensagem"></div>
+</body>
+
+</html>
+
+<!-- JAVA SCRIPT -->
+<script>
+    function analisar(event) {
+        event.preventDefault(); // Impede o recarregamento da página
+
+        var nome = input_nome.value;
+        var email = input_email.value;
+        var senha = input_senha.value;
+        var confirmação = input_confirmação.value;
+        // var senha = input_senha.value;
+
+        if (email == "" || senha == "" || confirmação == "") {
+            alert(`Preencha todos os campos obrigatórios`)
+
+        } else if (!email.includes("@")) {
+            alert(`Preencha um E-mail válido`)
+
+        } else {
+            alert(`Cadastro de Empresa - Realizado com Sucesso!`)
+
+            window.location.href = "./login.html"; //faz a navegação automática
+
+        }
+    }
+
+</script>

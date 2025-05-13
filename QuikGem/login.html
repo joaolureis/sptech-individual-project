@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <section class="container-cadastro">
+        <div class="card"> <!-- estou criando aqui o balão de cadastro -->
+            <div class="container2">
+                <img src="./public/assets/imgs/Contexto.png" alt="">
+            </div>
+            <div class="card-campo">
+                <div class="imagem">
+                    <img src="./public/assets/imgs/LOGO (1).png" alt="Logo QuikGem" width="80px"><br><br>
+                </div>
+                <h2>Bem vindo de volta!</h2><br>
+                <div class="campo">
+                    <span>E-mail</span>
+                    <br><br>
+                    <input type="text" id="input_email"> <br><br>
+                </div>
+                <div class="campo">
+                    <span>Senha</span>
+                    <br><br>
+                    <input type="text" id="input_senha"> <br><br>
+                </div>
+                <div class="confbotao">
+                    <button onclick="analisar(event)" class="botao">Login</button>
+                </div>
+                <div class="cad-login">
+                    <br><span>Não tem uma conta?<a href="./cadastro.html">Cadastre aqui!</a></span> 
+                    <span><a href="./index.html">Sair</a></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div id="div_mensagem"></div>
+</body>
+</html>
