@@ -257,11 +257,10 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-x: auto; /*ver o por que*/
-  
+
 }
+
 .personagens {
- 
   padding: 60px 20px;
   text-align: center;
 }
@@ -289,7 +288,6 @@ html {
 
 .personagens .horizontal-scroll {
   display: flex;
-  overflow-x: auto;
   gap: 20px;
   padding: 10px;
 }
@@ -305,7 +303,6 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0px;
   transition: transform 0.3s;
 }
 
@@ -317,14 +314,16 @@ html {
 .container-footer {
   background-color: rgba(82, 47, 140, 1);
   display: flex;
+  border-top: 1px solid white; /* define a borda inferior de um elemento */
   width: 100%;
-  height: 100px;
+  height: 84px;
   align-items: center;
   justify-content: space-between;
 }
 
 .container-footer p{
   color: #ffffff;
+  font-size: 14px;
 }
 
 .container-footer .img-logo{
