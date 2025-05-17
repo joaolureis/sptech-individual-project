@@ -10,11 +10,10 @@ html {
     position: fixed;  /*Deixa a nav fixa*/
     width: 100%;
     z-index: 1;
-    height: 80px;
+    height: 100px;
     padding-left: 5%;
     padding-right: 5%;
-    background: linear-gradient(rgba(82, 47, 140, 1), rgba(82, 47, 140, 1),rgba(82, 47, 140, 1));
-    border-bottom: 1px solid white; /* define a borda inferior de um elemento */
+    background: linear-gradient(rgba(0, 0, 0, 0.897), rgba(0, 0, 0, 0.568), rgba(0, 0, 0, 0));
   }
 
   .header .container img{

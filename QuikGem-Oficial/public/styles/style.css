@@ -32,18 +32,16 @@ html {
   }
   
   .home {
-    background: linear-gradient(to bottom, rgba(82, 47, 140, 1), rgba(82, 47, 140, 1),rgba(82, 47, 140, 1), rgba(24, 77, 135, 1), rgba(24, 77, 135, 1), rgba(24, 77, 135, 1),rgba(24, 77, 135, 1));
-    width: 100%;
-    height: 700px;
+    background-image: url(../assets/imgs/Group\ 101.svg);
+    height: 840px;
+    background-size: 100%;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
   }
 
-  .header{
+  .header{  
     width: 100%;
-    height: 100px;
+    height: 80px;
   }
-
 
   .banner {
     position: relative;
@@ -57,10 +55,14 @@ html {
  
   }
 
+  .banner #container img{
+    width: 30%;
+  }
   
   .banner #container {
     position: absolute;
-    right: 80px;
+    top: 140px;
+    right: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,40 +89,27 @@ html {
 
  /*-----Boas Vindas!-----*/
 
- .boas-vindas {
-  background-color: rgba(255, 255, 247, 1);
-  display: flex;
-  width: 100%;
-  height: 600px;
-}
-
 .boas-vindas .container {
-  display: flex;
+  position: absolute;
+  top: 510px;
+  right: 380px;
   justify-content: center;
-  align-items: center;
-
-}
-
-.boas-vindas .container .texto {
-  margin-left: 80px;
-  margin-right: 100px;
   align-items: center;
 }
 
 .boas-vindas .container .texto h1 {
-  color: rgba(240, 83, 30, 1);
-  font-size: 46px;
+  color: rgba(82, 47, 140, 1);
+  font-size: 28px;
   font-weight: 700;
-  padding-bottom: 25px;
-  width: 400px;
-
+  padding-bottom: 20px;
+  width: 250px;
 }
 
 .boas-vindas .container .texto p {
   color: #000000;
-  font-size: 23px;
+  font-size: 20px;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .boas-vindas .container .texto button {
@@ -139,26 +128,34 @@ html {
   font-weight: 600;
 }
 
-.boas-vindas .container .imagem{
-  padding-left: 40px;
+.boas-vindas .container .texto  {
+  position: absolute;
+  background: rgba(255, 255, 247, 1);
+  color: #000;
+  border-radius: 14px;
+  max-width: 760px;
+  padding: 38px;
+  text-align: flex-start;
+  position: relative;
+  transition: 0.3s ease;
+  background-repeat: no-repeat;
 }
 
-.boas-vindas .container img{
-  border-radius: 4%;
+.card:hover{
+  transform: scale(1.1);
 }
-
-
 
 /*------CONTEXTO------*/
 
 .contexto {
-  background-color: rgba(24, 77, 135, 1);
+  background-color: rgba(255, 255, 247, 1);
   display: flex;
   width: 100%;
   height: 600px;
 }
 
 .contexto .container {
+  padding-top: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -166,45 +163,38 @@ html {
 
 .contexto .container .texto {
   margin-left: 80px;
-  margin-right: 100px;
+  margin-right: 200px;
   align-items: center;
 }
 
 .contexto .container .texto h1 {
-  color: #ffffff;
+  color: #000000;
   font-size: 30px;
   font-weight: 700;
-  padding-bottom: 25px;
-  width: 400px;
-
+  width: 100%;
 }
 
 .contexto .container .texto p {
-  color: #ffffff;
+  color: #000000;
   font-size: 23px;
   font-weight: 400;
   line-height: 1.6;
   margin-top: 4%;
 }
 
-.contexto .container .imagem {
-  display: flex;
-  padding-left: 55px;
-  width: 100%;
-  height: 100%; 
-  overflow: hidden; 
+.contexto .container .imagem{
+  padding-right: 60px;
 }
 
-/*-------HISTORIA X DESENVOLVEDOR--------*/
+.contexto .container img{
+  width: 540px;
+}
+
+
+
+/*-------PONTOS FORTES--------*/
 
 .historia{
-  background-color: rgba(255, 255, 247, 1);
-  display: flex;
-  width: 100%;
-  height: 600px;
-}
-
-.historia {
   background-color: rgba(255, 255, 247, 1);
   display: flex;
   width: 100%;
@@ -219,14 +209,13 @@ html {
 }
 
 .historia .container .texto {
-  margin-left: 80px;
-  margin-right: 100px;
+  margin-left: 300px;
   align-items: center;
 }
 
 .historia .container .texto h1 {
-  color: rgba(240, 83, 30, 1);
-  font-size: 44px;
+  color: rgb(0, 0, 0);
+  font-size: 34px;
   font-weight: 700;
   padding-bottom: 25px;
   width: 600px;
@@ -240,18 +229,88 @@ html {
   line-height: 1.6;
 }
 
+.historia .container img {
+  width: 500px;
+}
 
 .historia .container .imagem{
-  padding-left: 40px;
+  padding-left: 94px;
+}
+
+.historia .botao{
+}
+
+.historia .container .texto button {
+  background: rgba(81, 113, 192, 1) ;
+  border: none;
+  margin-top: 25px;
+  width: 380px;
+  height: 45px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.historia .container .texto button {
+  color: #ffffff;
+  font-weight: 300;
 }
 
 
-/*-------Personagens--------*/
+/*-----------HISTORIA X DESENVOLVEDOR-------------*/
+.desenvolvedor{
+  background-color: rgba(255, 255, 247, 1);
+  background-image: url(../assets/imgs/lars.svg);
+  overflow: hidden;
+  display: flex;
+  min-width: 100%;
+  height: 700px;
+}
+
+.desenvolvedor .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.desenvolvedor .container .texto {
+  margin-left: 80px;
+  margin-right: 100px;
+  align-items: center;
+}
+
+.desenvolvedor .container .texto h1 {
+  color: rgb(0, 0, 0);
+  font-size: 44px;
+  font-weight: 700;
+  padding-bottom: 25px;
+  width: 600px;
+
+}
+
+.desenvolvedor .container .texto p {
+  color: #000000;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.desenvolvedor .container img {
+  width: 500px;
+}
+
+.desenvolvedor .container .imagem{
+  padding-left: 94px;
+}
+
+/*-------PERSONAGENS--------*/
 
 .personagens {
-  background: linear-gradient(to top, rgba(82, 47, 140, 1), rgba(82, 47, 140, 1),rgba(82, 47, 140, 1), rgba(24, 77, 135, 1), rgba(24, 77, 135, 1), rgba(24, 77, 135, 1),rgba(24, 77, 135, 1)) ;
+  background-image: url(../assets/imgs/Group\ 101.svg);
+  background-repeat: no-repeat;
   padding: 40px 20px;
-  height: 600px;
+  height: 700px;
   overflow: hidden;
   width: 100%;
   display: flex;
@@ -300,6 +359,7 @@ html {
   color: #333;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   display: flex;
+  padding-top: 100px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -312,7 +372,7 @@ html {
 
 /*-------Footer--------*/
 .container-footer {
-  background-color: rgba(82, 47, 140, 1);
+  background-color: rgba(25, 24, 26, 1);
   display: flex;
   border-top: 1px solid white; /* define a borda inferior de um elemento */
   width: 100%;
@@ -341,4 +401,5 @@ html {
   padding-left: 5%;
   padding-right: 5%;
 }
+
 
