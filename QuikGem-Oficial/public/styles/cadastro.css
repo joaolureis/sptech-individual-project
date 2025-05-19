@@ -56,7 +56,8 @@ body {
     flex: 1;
     position: relative;
     overflow: hidden;
-    background-color: rgba(0, 0, 128, 0.4); /* sobreposição azul */
+    background-color: rgb(176, 179, 3); /* sobreposição amarelo */
+    background-color: rgb(0, 0, 0) /* sobreposição preto */
 }
 
 .container-cadastro .container2 img {
@@ -86,7 +87,7 @@ body {
 }
 
 .botao {
-    background-color: #1e3a8a;
+    background-color: #000000;
     color: rgba(253, 253, 247, 1);
     padding: 12px;
     border: none;
@@ -97,7 +98,7 @@ body {
 }
 
 .botao:hover {
-    background-color: #2541a1;
+    background-color: #1d1e1e;
 }
 
 .descricao span {
@@ -110,7 +111,7 @@ body {
     justify-content: center;
     padding-right: 50px;
     font-size: 14px;
-    color: #1e3a8a;
+    color: #000000;
 }
 
 .cad-login {
@@ -118,7 +119,7 @@ body {
 }
 
 .cad-login a{
-    color:rgba(127, 86, 218, 1)
+    color:rgb(76, 54, 125)
 }
 
 a:hover {

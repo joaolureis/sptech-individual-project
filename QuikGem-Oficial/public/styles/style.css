@@ -32,7 +32,7 @@ html {
   }
   
   .home {
-    background-image: url(../assets/imgs/Group\ 101.svg);
+    background-image: url(../assets/imgs/imghome.svg);
     height: 840px;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -98,7 +98,7 @@ html {
 }
 
 .boas-vindas .container .texto h1 {
-  color: rgba(82, 47, 140, 1);
+  color: rgb(53, 34, 157);
   font-size: 28px;
   font-weight: 700;
   padding-bottom: 20px;
@@ -113,7 +113,7 @@ html {
 }
 
 .boas-vindas .container .texto button {
-  background: linear-gradient(to bottom, rgba(113, 75, 178, 1), rgba(113, 75, 178, 1),rgba(113, 75, 178, 1),rgba(96, 105, 188, 1), rgba(88, 119, 193, 1),rgba(78, 136, 199, 1)) ;
+  background: rgb(53, 34, 157)   ;
   border: none;
   margin-top: 25px;
   width: 120px;
@@ -124,7 +124,7 @@ html {
 }
 
 .boas-vindas .container .texto button a{
-  color: #ffffff;
+  color: rgba(255, 255, 247, 1);
   font-weight: 600;
 }
 
@@ -237,8 +237,6 @@ html {
   padding-left: 94px;
 }
 
-.historia .botao{
-}
 
 .historia .container .texto button {
   background: rgba(81, 113, 192, 1) ;
@@ -260,7 +258,7 @@ html {
 /*-----------HISTORIA X DESENVOLVEDOR-------------*/
 .desenvolvedor{
   background-color: rgba(255, 255, 247, 1);
-  background-image: url(../assets/imgs/lars.svg);
+  background-image: url(../assets/imgs/desenvolvedor.svg);
   overflow: hidden;
   display: flex;
   min-width: 100%;
@@ -275,13 +273,13 @@ html {
 }
 
 .desenvolvedor .container .texto {
-  margin-left: 80px;
-  margin-right: 100px;
+  margin-left: 60px;
+  margin-right: 60px;
   align-items: center;
 }
 
 .desenvolvedor .container .texto h1 {
-  color: rgb(0, 0, 0);
+  color: rgba(255, 255, 247, 1);
   font-size: 44px;
   font-weight: 700;
   padding-bottom: 25px;
@@ -290,27 +288,24 @@ html {
 }
 
 .desenvolvedor .container .texto p {
-  color: #000000;
+  color: rgba(255, 255, 247, 1);
   font-size: 23px;
   font-weight: 400;
   line-height: 1.6;
 }
 
 .desenvolvedor .container img {
-  width: 500px;
+  width: 600px;
 }
 
-.desenvolvedor .container .imagem{
-  padding-left: 94px;
-}
 
 /*-------PERSONAGENS--------*/
 
 .personagens {
-  background-image: url(../assets/imgs/Group\ 101.svg);
+  background-color: rgba(255, 255, 247, 1);
   background-repeat: no-repeat;
   padding: 40px 20px;
-  height: 700px;
+  height: 650px;
   overflow: hidden;
   width: 100%;
   display: flex;
@@ -325,19 +320,52 @@ html {
 }
 
 .personagens #garnet{
-  background-color: rgba(165, 58, 132, 1);
-  padding-top: 50px;
+  background-color: rgba(255, 255, 247, 1);
+  padding-bottom: 180px;
+}
+
+.personagens #garnet img{
+  width: 80%;
 }
 
 .personagens #ametista{
-  background-color: rgba(184, 152, 204, 1);
-  padding-top: 50px;
+  background-color: rgba(255, 255, 247, 1);
+  padding-bottom: 180px;
+}
+
+.personagens #ametista img{
+  width: 84%;
 }
 
 .personagens #perola{
-  background-color: rgba(248, 244, 226, 1);
-  padding-top: 40px;
-  padding-right: 20px;
+  background-color: rgba(255, 255, 247, 1);
+  padding-bottom: 180px;
+}
+
+.personagens #perola img{
+  width: 84%;
+}
+
+
+.personagens #steven{
+  background-color: rgba(255, 255, 247, 1);
+  padding-bottom: 180px;
+}
+
+.personagens #steven img{
+  width: 88%;
+
+}
+
+.personagens #rose{
+  background-color: rgba(255, 255, 247, 1);
+  padding-bottom: 180px;
+
+}
+
+.personagens #rose img{
+  width: 88%;
+
 }
 
 .personagens h2 {
@@ -352,12 +380,13 @@ html {
 }
 
 .personagens .card {
+  position: relative;
   min-width: 280px;
-  height: 320px;
+  height: 420px;
   background-color: #ffffff;
   border-radius: 20px;
   color: #333;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow:  1px 2px rgba(82, 47, 140, 1);
   display: flex;
   padding-top: 100px;
   flex-direction: column;
@@ -370,9 +399,32 @@ html {
   transform: translateY(-10px);
 }
 
+.personagens p {
+  padding-top: 30px;
+  padding-right: 160px;
+  font-weight: 690;
+  font-size: 18px;
+  color: #000;
+ 
+}
+
+.personagens .container a{
+  position: absolute;
+  bottom: 10px;
+  color: rgba(82, 47, 140, 1);
+}
+
+.personagens h1 {
+  text-align: justify;
+  font-weight: 650;
+  padding-left: 20px;
+  padding-bottom: 40px ;
+
+}
+
 /*-------Footer--------*/
 .container-footer {
-  background-color: rgba(25, 24, 26, 1);
+  background-color: rgb(0, 0, 0);
   display: flex;
   border-top: 1px solid white; /* define a borda inferior de um elemento */
   width: 100%;
@@ -383,7 +435,7 @@ html {
 
 .container-footer p{
   color: #ffffff;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .container-footer .img-logo{
@@ -401,5 +453,7 @@ html {
   padding-left: 5%;
   padding-right: 5%;
 }
+
+
 
 
