@@ -95,7 +95,7 @@ html {
     justify-content: center;
     align-items: center;
     font-weight: 600;
-    color: #ffffff;
+    color: rgba(252, 252, 231);
     background-color: #000000;
     border-radius: 7px;
     height: 28px;
@@ -106,7 +106,7 @@ html {
   }
   
   #cadastro:hover {
-    background-color: #eeeded;
+    background-color:  rgba(252, 252, 231);
     color: #000000;
     font-weight: 600;
   }

@@ -113,7 +113,7 @@ html {
 }
 
 .boas-vindas .container .texto button {
-  background: rgb(53, 34, 157)   ;
+  background: rgb(48, 36, 116)   ;
   border: none;
   margin-top: 25px;
   width: 120px;
@@ -139,6 +139,10 @@ html {
   position: relative;
   transition: 0.3s ease;
   background-repeat: no-repeat;
+}
+
+#botao-home:hover{
+  background-color:rgb(61, 47, 137) ;
 }
 
 .card:hover{
@@ -382,7 +386,7 @@ html {
 .personagens .card {
   position: relative;
   min-width: 280px;
-  height: 420px;
+  height: 360px;
   background-color: #ffffff;
   border-radius: 20px;
   color: #333;
@@ -391,7 +395,7 @@ html {
   padding-top: 100px;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center;  
   transition: transform 0.3s;
 }
 
