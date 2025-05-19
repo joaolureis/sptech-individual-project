@@ -243,7 +243,7 @@ html {
 
 
 .historia .container .texto button {
-  background: rgba(81, 113, 192, 1) ;
+  background: #220b67 ;
   border: none;
   margin-top: 25px;
   width: 380px;
@@ -251,13 +251,8 @@ html {
   border-radius: 5px;
   font-size: 20px;
   font-weight: 500;
+    color: #ffffff;
 }
-
-.historia .container .texto button {
-  color: #ffffff;
-  font-weight: 300;
-}
-
 
 /*-----------HISTORIA X DESENVOLVEDOR-------------*/
 .desenvolvedor{
@@ -457,6 +452,7 @@ html {
   padding-left: 5%;
   padding-right: 5%;
 }
+
 
 
 
