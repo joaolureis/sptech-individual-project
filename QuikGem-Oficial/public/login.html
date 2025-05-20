@@ -5,11 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/assets/imgs/logo-final.png">
     <link rel="stylesheet" href="/styles/login.css">
+     <script src="./js/sessao.js"></script>
 
     <title>Login - QuikGem</title>
 </head>
 <body>
      <section class="container-cadastro">
+        <div class="alerta_erro">
+            <div class="card_erro" id="cardErro">
+                <span id="mensagem_erro"></span>
+            </div>
+        </div>
         <div class="card"> <!-- estou criando aqui o balão de cadastro -->
             <div class="card-campo">
                 <div class="imagem">
@@ -27,12 +33,16 @@
                     <input type="text" id="input_senha"> <br><br>
                 </div>
                 <div class="confbotao">
-                    <button onclick="analisar(event)" class="botao">Login</button>
+                    <button onclick="entrar(event)" class="botao">Login</button>
                 </div>
                 <div class="cad-login">
                     <br><span>Não tem uma conta<a href="./cadastro.html">? Cadastre aqui!</a></span> 
                     <span><a href="./index.html">Sair</a></span>
                 </div>
+                 <div id="div_aguardar" class="loading-div">
+                    <img src="./assets/imgs/aguarde-pink.gif" id="loading-gif">
+                </div>
+                <div id="div_erros_login"></div>
             </div>
              <div class="container2">
                 <img src="/assets/imgs/cadastro-login.png" alt="">
@@ -44,27 +54,74 @@
     <div id="div_mensagem"></div>
 </body>
 </html>
-
-<!-- JAVA SCRIPT -->
 <script>
-    function analisar(event) {
-        event.preventDefault(); // Impede o recarregamento da página
+    function entrar() {
+        aguardar();
 
-        var email = input_email.value;
-        var senha = input_senha.value;
+        var emailVar = input_email.value;
+        var senhaVar = input_senha.value;
 
-        if (email == "" || senha == "") {
-            alert(`Preencha todos os campos obrigatórios`)
-
-        } else if (!email.includes("@")) {
-            alert(`Preencha um E-mail válido`)
-
-        } else {
-            alert(`Login - Realizado com Sucesso!`)
-
-            window.location.href = "./login.html"; //faz a navegação automática
-
+        if (emailVar == "" || senhaVar == "") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            finalizarAguardar();
+            return false;
         }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
+                    sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
+
+                    setTimeout(function () {
+                        window.location = "./dashboard/cards.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+    function sumirMensagem() {
+        cardErro.style.display = "none"
     }
 
 </script>
