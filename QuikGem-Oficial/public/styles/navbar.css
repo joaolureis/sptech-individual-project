@@ -38,7 +38,7 @@ html {
   
   .header .container .navbar a{
     font-weight: 500;
-    color: aliceblue;
+    color:  rgba(253, 253, 247, 1);
     text-decoration: none;
     font-size: 15px;
   
@@ -46,7 +46,7 @@ html {
   .menu-center {
     display: flex;
     justify-content: center; 
-    padding-left: 30%;
+    padding-left: 36%;
   }
   
   .menu-right {

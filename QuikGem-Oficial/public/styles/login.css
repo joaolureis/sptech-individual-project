@@ -145,6 +145,7 @@ a:hover {
 .alerta_erro{
   display: flex;
   justify-content: flex-end;
+  z-index: 9999;
 }
 
 .card_erro {
@@ -206,4 +207,6 @@ input {
   height: 50px;
   width: 50px;
 }
+
+
 

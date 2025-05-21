@@ -63,7 +63,7 @@
 
         if (emailVar == "" || senhaVar == "") {
             cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            mensagem_erro.innerHTML = "Preencha os campos em branco";
             finalizarAguardar();
             return false;
         }
@@ -88,6 +88,8 @@
 
             if (resposta.ok) {
                 console.log(resposta);
+                mensagem_erro.innerHTML =
+                        "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
                 resposta.json().then(json => {
                     console.log(json);
@@ -95,10 +97,9 @@
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.nome;
                     sessionStorage.ID_USUARIO = json.id;
-                    sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
 
                     setTimeout(function () {
-                        window.location = "./dashboard/cards.html";
+                        window.location = "./dashboard/dashboard.html";
                     }, 1000); // apenas para exibir o loading
 
                 });

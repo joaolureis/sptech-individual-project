@@ -1,9 +1,9 @@
--- DROP TABLE Usuario;
--- DROP TABLE Resultado;
--- DROP TABLE Quiz;
--- DROP TABLE respostahist;
--- DROP TABLE Pergunta;
--- DROP TABLE alternativa;
+DROP TABLE Usuario;
+DROP TABLE Resultado;
+DROP TABLE Quiz;
+DROP TABLE respostahist;
+DROP TABLE Pergunta;
+DROP TABLE alternativa;
 
 CREATE DATABASE steven;
 USE steven;
@@ -12,7 +12,7 @@ CREATE TABLE Usuario(
 idUsuario INT PRIMARY KEY auto_increment,
 nome VARCHAR(80) NOT NULL,
 senha VARCHAR(45) NOT NULL,
-email VARCHAR(45) NOT NULL
+email VARCHAR(45) NOT NULL UNIQUE
 );
 
 CREATE TABLE Quiz(
