@@ -300,126 +300,81 @@ html {
 
 /*-------PERSONAGENS--------*/
 
-.personagens {
+
+.personagens .container {
   background-color: rgba(255, 255, 247, 1);
   background-repeat: no-repeat;
-  padding: 40px 20px;
-  height: 650px;
-  overflow: hidden;
-  width: 100%;
+  height: 400px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-
-.personagens {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.personagens #garnet{
-  background-color: rgba(255, 255, 247, 1);
-  padding-bottom: 180px;
-}
-
-.personagens #garnet img{
-  width: 80%;
-}
-
-.personagens #ametista{
-  background-color: rgba(255, 255, 247, 1);
-  padding-bottom: 180px;
-}
-
-.personagens #ametista img{
-  width: 84%;
-}
-
-.personagens #perola{
-  background-color: rgba(255, 255, 247, 1);
-  padding-bottom: 180px;
-}
-
-.personagens #perola img{
-  width: 84%;
-}
-
-
-.personagens #steven{
-  background-color: rgba(255, 255, 247, 1);
-  padding-bottom: 180px;
-}
-
-.personagens #steven img{
-  width: 88%;
-
-}
-
-.personagens #rose{
-  background-color: rgba(255, 255, 247, 1);
-  padding-bottom: 180px;
-
-}
-
-.personagens #rose img{
-  width: 88%;
-
-}
-
-.personagens h2 {
-  font-size: 36px;
-  margin-bottom: 30px;
-}
-
-.personagens .horizontal-scroll {
-  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
-  padding: 10px;
-}
-
-.personagens .card {
-  position: relative;
-  min-width: 280px;
-  height: 360px;
-  background-color: #ffffff;
-  border-radius: 20px;
-  color: #333;
-  box-shadow:  1px 2px rgba(82, 47, 140, 1);
-  display: flex;
-  padding-top: 100px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;  
-  transition: transform 0.3s;
-}
-
-.personagens .card:hover {
-  transform: translateY(-10px);
-}
-
-.personagens p {
-  padding-top: 30px;
-  padding-right: 160px;
-  font-weight: 690;
-  font-size: 18px;
-  color: #000;
- 
-}
-
-.personagens .container a{
-  position: absolute;
-  bottom: 10px;
-  color: rgba(82, 47, 140, 1);
-}
-
-.personagens h1 {
-  text-align: justify;
-  font-weight: 650;
-  padding-left: 20px;
-  padding-bottom: 40px ;
+  justify-content: center;
 
 }
+
+.card {
+      width: 240px;
+      height: 300px;
+      perspective: 1000px;
+    }
+
+    .card-inner {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.6s;
+    }
+
+    .card:hover .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      background: rgba(255, 255, 247, 1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .card-front img {
+      width: 90%;
+    }
+
+    .card-back {
+      transform: rotateY(180deg);
+      background: #d1c4e9;
+    }
+
+    .flip-btn {
+      margin-top: 15px;
+      padding: 5px 10px;
+      border: none;
+      background-color: #7e57c2;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .flip-btn:hover {
+      background-color: #5e35b1;
+    }
+
+    .personagens h1{
+      background-color: rgba(255, 255, 247, 1);
+      padding: 40px;
+      font-size: 20px;
+      font-weight: 600;
+    }
 
 /*-------Footer--------*/
 .container-footer {

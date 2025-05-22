@@ -95,7 +95,7 @@
             finalizarAguardar();
             return false;
 
-        }  else if (!emailVar.includes("@")) {
+        } else if (!emailVar.includes("@")) {
 
             cardErro.style.display = "block";
             mensagem_erro.innerHTML = `<style="color: red;">Preencha um E-mail válido</style>`
@@ -103,7 +103,7 @@
             finalizarAguardar();
             return false;
 
-        }else {
+        } else {
             setInterval(sumirMensagem, 5000);
         }
 
