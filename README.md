@@ -8,7 +8,7 @@
 
 ##  🧩 **Funcionalidades:**
 
-- **Quiz interativo**: Um quiz para que os usuários possam descobrir com qual personagem de *Steven Universe* mais se identificam.
+- **Quiz interativo**: Quiz interativo de conhecimento geral sobre Steven Universe — teste seus conhecimentos e descubra o quanto você realmente conhece a série!
 - **Página inicial**: Uma introdução ao mundo de *Steven Universe*, além de um espaço para os usuários se conectarem com as lições abordadas.
 
 ##  🎯 **Objetivos do projeto:**
