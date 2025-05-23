@@ -198,6 +198,8 @@ input {
 }
 
 .loading-div {
+  position: absolute;
+  padding-left: 465px;
   width: 50px;
   margin: auto;
   display: none;
