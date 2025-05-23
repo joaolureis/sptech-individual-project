@@ -300,7 +300,6 @@ html {
 
 /*-------PERSONAGENS--------*/
 
-
 .personagens .container {
   background-color: rgba(255, 255, 247, 1);
   background-repeat: no-repeat;
@@ -309,7 +308,6 @@ html {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
-
 }
 
 .card {
