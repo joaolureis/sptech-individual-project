@@ -77,12 +77,24 @@ button {
     color: var(--new-gray);
 }
 
+
+
 #pontuacao{
     background-color: rgba(255, 255, 247, 1);
     display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    align-content: stretch;
     text-align: center;
+    align-items: center;
+    justify-content: center;
     position: absolute;
-    top: 10px;
+    top: 260px;
+    left: 362px;
+    width: 808px;
+    height: 300px;
+    border-end-end-radius: 10px;
+    border-end-start-radius: 10px;
 }
 
 .navbar {
@@ -94,7 +106,7 @@ button {
 
 .Quizz {
     display: flex;
-    padding-top: 80px;
+    padding-top: 180px;
     justify-content: center;
     align-items: center;
 }

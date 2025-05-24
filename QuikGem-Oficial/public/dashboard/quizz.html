@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exemplo - Quiz</title>
     <link rel="stylesheet" href="../styles/quizz.css">
+    <script src="../js/quizz.js"></script>
+    <script src="../js/sessao.js"></script>
+
 </head>
 
-
 <body onload="onloadEsconder()">
+
     <section class="Quizz">
         <div class="container">
             <div id="pontuacaoEJogo">
@@ -186,9 +189,10 @@
     }
 
     function iniciarQuiz() {
-        document.getElementById('pontuacao').style.display = "flex"
+        document.getElementById('pontuacao').style.display = "none"
         document.getElementById('jogo').style.display = "flex"
         document.getElementById('btnIniciarQuiz').style.display = "none"
+        document.getElementById('btnTentarNovamente').style.display = "none"
 
         document.getElementById('qtdQuestoes').innerHTML = quantidadeDeQuestoes
 
@@ -334,7 +338,7 @@
             classComCoresParaMensagemFinal = "text-warning-with-bg"
         }
         else if (porcentagemFinalDeAcertos >= 0.9) {
-            textoParaMensagemFinal = "Uau, parabéns! Você é um fâ de Steven Universo!"
+            textoParaMensagemFinal = "Uau, parabéns! Você é um fã de Steven Universo!"
             classComCoresParaMensagemFinal = "text-success-with-bg"
         }
 
@@ -344,13 +348,20 @@
         document.getElementById('msgFinal').innerHTML = textoParaMensagemFinal
         document.getElementById('msgFinal').classList.add(classComCoresParaMensagemFinal)
         document.getElementById('spanPontuacaoFinal').innerHTML = pontuacaoFinal
+        document.getElementById('pontuacao').style.display = "flex"
+        document.getElementById('pontuacaoFinal').style.display = "none"
+        document.getElementById('pontuacaoDuranteJogo').style.display = "none"
+        document.getElementById('jogo').style.display = "none"
+        
 
         document.getElementById('jogo').classList.add("text-new-gray")
 
         btnProx.disabled = true
         btnSubmeter.disabled = true
-        // btnConcluir.disabled = true
+        //btnConcluir.disabled = true
         btnTentarNovamente.disabled = false
 
     }
+    
+
 </script>
