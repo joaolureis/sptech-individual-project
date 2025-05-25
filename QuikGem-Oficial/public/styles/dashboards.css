@@ -127,6 +127,8 @@ body {
   background-color: rgba(253, 253, 247, 1);
   height: 100vh;
   overflow: auto;
+  padding-right: 40px;
+  padding-left: 40px;
 }
 
 .area-parametros-alerta {
@@ -151,94 +153,6 @@ body {
   width: 100%;
 }
 
-.item-regua {
-  width: 20%;
-  text-align: center;
-  height: 80px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-self: center;
-}
-
-.item-regua p {
-  margin: 0;
-  font-weight: 500;
-}
-
-.item-regua p:nth-child(2) {
-  font-weight: 800;
-}
-
-.perigo-frio {
-  background-color: #5c6bc0;
-}
-
-.perigo-quente {
-  background-color: #ff7043;
-}
-
-.alerta-frio {
-  background-color: #42a5f5;
-}
-
-.alerta-quente {
-  background-color: #ffee58;
-}
-
-.ideal {
-  background-color: #9ccc65;
-}
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  height: 450px;
-  width: 100%;
-  align-items: center;
-  color: white;
-}
-
-.card-aquario {
-  margin: 2%;
-  min-width: 40%;
-  max-width: 50%;
-  width: fit-content;
-  flex-wrap: wrap;
-  display: flex;
-  /* text-align: center; */
-  height: 180px;
-  /* justify-content: right; */
-  background-color: #212124;
-  font-size: 20px;
-}
-
-.card-aquario h1 {
-  width: fit-content;
-}
-
-.card-aquario p {
-  margin: 0;
-  font-size: 50px;
-  font-weight: lighter;
-  text-align: left;
-}
-
-.desc-aquario {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-}
-
-.desc-aquario .cor-alerta {
-  width: 30px;
-}
-
-.title-aquario {
-  width: 100%;
-}
 
 
 .cards h1 {
@@ -249,19 +163,6 @@ body {
   margin: 20px;
 }
 
-.temperatura,
-.umidade {
-  margin: 5px;
-  margin-left: 20px;
-  width: 75%;
-}
-
-.cor-alerta {
-  width: 13%;
-  height: 30%;
-  border-radius: 50%;
-  display: inline-block;
-}
 
 .btns-dash {
   display: flex;
@@ -329,7 +230,6 @@ canvas {
   height: 100% !important;
 }
 
-/* PAGINA DOS GRÁFICOS 2023 */
 
 .janela {
   display: flex;
@@ -459,3 +359,140 @@ canvas {
     transform: scale(1.05);
     transition: 0.3s;
 }
+
+/*DASHBOARD - HOME*/
+/* DASHBOARD - INFO */
+.container-info {
+    display: flex;
+    flex: 1;
+    margin-top: 10px;
+}
+
+.container-info .info {
+    width: 94%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-info {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.kpis {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+    gap: 80px;
+    height: 180px;
+}
+
+.kpi {
+    width: 80%;
+    border-radius: 10px;
+    padding: 20px;
+    max-height: 140px;
+    border: 1px solid rgb(202, 202, 202);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.kpi.maior {
+    border: 1px solid rgba(253, 253, 247, 1);
+    background-color:rgba(253, 253, 247, 1);
+}
+
+.kpi.menor {
+    border: 1px solid rgb(255, 255, 255);
+    background-color:rgba(253, 253, 247, 1);
+}
+
+.kpi.media {
+    border: 1px solid rgba(253, 253, 247, 1);
+    background-color: rgba(253, 253, 247, 1);
+}
+
+.kpi canvas {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: block;
+}
+
+.kpi h3 {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.container-data {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container-data .data-kpi {
+    font-size: 35px;
+    font-weight: 650;
+    color: black;
+    margin: 0%;
+}
+
+.container-data .description {
+    font-weight: 400;
+    font-size: 26px;
+    margin: 0%;
+}
+
+.datatime-update {
+    font-size: 16px;
+    color: rgb(161, 161, 161);
+    font-weight: 500;
+    margin: 10px 0px;
+}
+
+.container-graphic {
+    display: flex;
+    flex: 1;
+    gap: 80px;
+}
+
+.graphics {
+    margin-bottom: 5%;
+    margin-top: 2%;
+    height: 60%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    border: 1px solid rgb(184, 184, 184);
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.graphics .info-graphic {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    gap: 20px;
+}
+
+.graphics .info-graphic.status{
+    flex-direction: row;
+}
+
+.graphics .info-graphic.status p{
+    font-weight: 800;
+}
+
+.info-graphic h3 {
+    font-weight: 500;
+    font-size: 18px;
+}
+
