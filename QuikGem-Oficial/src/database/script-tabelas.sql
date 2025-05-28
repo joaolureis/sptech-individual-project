@@ -41,19 +41,10 @@ CONSTRAINT fkPerguntaQuiz FOREIGN KEY (fkQuiz) REFERENCES Quiz(idQuiz)
 CREATE TABLE alternativa(
 idAlternativa INT PRIMARY KEY auto_increment,
 fkPergunta INT,
-letra CHAR(1) NOT NULL,
 resposta VARCHAR(100),
 correta TINYINT NOT NULL,
 	CONSTRAINT fkAlternativaPergunta FOREIGN KEY (fkPergunta) REFERENCES Pergunta(idPergunta)
 ); 
-
-CREATE TABLE respostahist(
-idRespostahist INT PRIMARY KEY auto_increment,
-fkAlternativa INT,
-fkResultado INT,
-		CONSTRAINT fkRespostaAlternativa FOREIGN KEY (fkAlternativa) REFERENCES Alternativa(idAlternativa),
-		CONSTRAINT fkRespostaResultado FOREIGN KEY (fkResultado) REFERENCES Resultado(idResultado)
-);
 
 INSERT INTO Usuario VALUES 
 (default, 'João Lucas','123456*','joao.lcarvalho@sptech.school'),
@@ -80,7 +71,18 @@ INSERT INTO Pergunta VALUES
 (default, 'O que acontece com a gema de Steven ao final da série Steven Universe Future?', 1),
 (default, 'Quem é a melhor amiga humana de Steven e também treina espada com Pearl?', 1),
 (default, 'Qual fusão representa a união de Garnet, Amethyst e Pearl?', 1),
-(default, 'O que acontece quando duas Gems se fundem?', 1);
+(default, 'O que acontece quando duas Gems se fundem?', 1),
+(default, 'Qual é o nome completo do pai de Steven?', 1),
+(default, 'Qual dessas Gems era uma engenheira e construtora?', 1),
+(default, 'O que Garnet representa?', 1),
+(default, 'Quem é a fusão de Steven e Connie?', 1),
+(default, 'Qual é um dos principais temas abordados na série?', 1),
+(default, 'Qual é o nome do planeta natal das Gems?', 1),
+(default, 'Quem é a líder suprema das Diamonds?', 1),
+(default, 'Como Steven geralmente cura outras pessoas ou Gems?', 1),
+(default, 'Quem é responsável pela arte visual única de Steven Universe?', 1),
+(default, 'Quem é Spinel na história?', 1);
+
 
 -- Pergunta 1: Qual é a fusão entre Ruby e Sapphire?
 INSERT INTO Alternativa (fkPergunta, letra, resposta, correta) VALUES
@@ -152,50 +154,72 @@ INSERT INTO Alternativa (fkPergunta, letra, resposta, correta) VALUES
 (10, 'C', 'Elas mudam de cor', 0),
 (10, 'D', 'Elas perdem seus poderes', 0);
 
-INSERT INTO respostahist (fkAlternativa, fkResultado) VALUES
-(1, 1),
-(5, 1),
-(9, 1),
-(13, 1),
-(17, 1),
-(21, 1),
-(25, 1),
-(29, 1),
-(33, 1),
-(37, 1);
+-- Pergunta 11: Qual é o nome completo do pai de Steven?
+INSERT INTO Alternativa (fkPergunta, letra, resposta, correta) VALUES
+(11, 'A', 'Greg Universe', 0),
+(11, 'B', 'Greg DeMayo', 0),
+(11, 'C', 'Greg Quartz', 0),
+(11, 'D', 'Gregory DeMayo Universe', 1);
 
-INSERT INTO respostahist (fkAlternativa, fkResultado) VALUES
-(1, 2),
-(6, 2),  -- errada
-(9, 2),
-(13, 2),
-(17, 2),
-(21, 2),
-(25, 2),
-(29, 2),
-(33, 2),
-(37, 2);
+-- Pergunta 12: Qual dessas Gems era uma engenheira e construtora?
+INSERT INTO Alternativa (fkPergunta, letra, resposta, correta) VALUES
+(12, 'A', 'Bismuth', 1),
+(12, 'B', 'Lapis Lazuli', 0),
+(12, 'C', 'Peridot', 0),
+(12, 'D', 'Jasper', 0);
 
-INSERT INTO respostahist (fkAlternativa, fkResultado) VALUES
-(2, 3),  -- errada
-(6, 3),  -- errada
-(9, 3),
-(13, 3),
-(17, 3),
-(21, 3),
-(25, 3),
-(29, 3),
-(33, 3),
-(37, 3);
+-- Pergunta 13: O que Garnet representa?
+INSERT INTO Alternativa (fkPergunta, letra, resposta, correta) VALUES
+(13, 'A', 'A união entre humano e Gem', 0),
+(13, 'B', 'A liderança natural das Gems', 0),
+(13, 'C', 'A fusão do amor verdadeiro', 1),
+(13, 'D', 'A força bruta do time', 0);
 
-INSERT INTO respostahist (fkAlternativa, fkResultado) VALUES
-(2, 4),  -- errada
-(6, 4),  -- errada
-(10, 4), -- errada
-(13, 4),
-(17, 4),
-(21, 4),
-(25, 4),
-(29, 4),
-(33, 4),
-(37, 4);
+-- Pergunta 14: Quem é a fusão de Steven e Connie?
+INSERT INTO Alternativa (fkPergunta, letra, resposta, correta) VALUES
+(14, 'A', 'Opal', 0),
+(14, 'B', 'Stevonnie', 1),
+(14, 'C', 'Sardonyx', 0),
+(14, 'D', 'Rainbow Quartz', 0);
+
+-- Pergunta 15: Qual é um dos principais temas abordados na série?
+INSERT INTO Alternativa (fkPergunta, letra, resposta, correta) VALUES
+(15, 'A', 'Tecnologia avançada', 0),
+(15, 'B', 'Guerra e destruição', 0),
+(15, 'C', 'Família, identidade e aceitação', 1),
+(15, 'D', 'Conquista de planetas', 0);
+
+-- Pergunta 16: Qual é o nome do planeta natal das Gems?
+INSERT INTO Alternativa (fkPergunta, letra, resposta, correta) VALUES
+(16, 'A', 'Gemworld', 0),
+(16, 'B', 'Earth', 0),
+(16, 'C', 'Homeworld', 1),
+(16, 'D', 'Crystal Empire', 0);
+
+-- Pergunta 17: Quem é a líder suprema das Diamonds?
+INSERT INTO Alternativa (fkPergunta, letra, resposta, correta) VALUES
+(17, 'A', 'Yellow Diamond', 0),
+(17, 'B', 'Blue Diamond', 0),
+(17, 'C', 'White Diamond', 1),
+(17, 'D', 'Pink Diamond', 0);
+
+-- Pergunta 18: Como Steven geralmente cura outras pessoas ou Gems?
+INSERT INTO Alternativa (fkPergunta, letra, resposta, correta) VALUES
+(18, 'A', 'Com seus escudos', 0),
+(18, 'B', 'Com suas lágrimas e saliva', 1),
+(18, 'C', 'Com um feixe de energia rosa', 0),
+(18, 'D', 'Com um beijo mágico', 0);
+
+-- Pergunta 19: Quem é responsável pela arte visual única de Steven Universe?
+INSERT INTO Alternativa (fkPergunta, letra, resposta, correta) VALUES
+(19, 'A', 'Rebecca Sugar', 1),
+(19, 'B', 'Pendleton Ward', 0),
+(19, 'C', 'Genndy Tartakovsky', 0),
+(19, 'D', 'Lauren Faust', 0);
+
+-- Pergunta 20: Quem é Spinel na história?
+INSERT INTO Alternativa (fkPergunta, letra, resposta, correta) VALUES
+(20, 'A', 'Uma nova Crystal Gem', 0),
+(20, 'B', 'Uma amiga esquecida de Pink Diamond', 1),
+(20, 'C', 'Uma filha de White Diamond', 0),
+(20, 'D', 'Uma invenção humana', 0);
