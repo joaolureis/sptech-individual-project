@@ -77,17 +77,6 @@ button {
     color: var(--new-gray);
 }
 
-/* .container{
-display: flex;
-justify-content: center;
-margin-top: 10px; padding: 10px 20px;
- font-size: 16px;
-  background-color: #6c5ce7; 
-  color: white; border: none; 
-  border-radius: 8px; 
-  cursor: pointer;
-} */
-
 #pontuacao{
     background-color: rgba(255, 255, 247, 1);
     display: flex;
