@@ -64,8 +64,7 @@
                         <button onclick="avancar()" id="btnProx" disabled>Avançar</button>
                         <!-- <button onclick="finalizar()" id="btnConcluir" disabled>Finalizar Quiz</button> -->
                         <button onclick="tentarNovamente()" id="btnTentarNovamente" disabled>Tentar novamente</button>
-                    </div>
-                   
+                    </div>                   
                 </div>
             </div>
         </div>
@@ -375,24 +374,24 @@
 
     }
     
-    window.onload = () => {
-        fetch(`/quiz/perguntas`)
-        .then(res => res.json())
-        .then(data => {
-            const perguntasAgrupadas = {}
-            data.forEach(item => {
-                if(!perguntasAgrupadas[item.idPergunta]) {
-                    perguntasAgrupadas[item.idPergunta] = {
-                        pergunta: item.pergunta,
-                        respostas:[]
-                    }
-                }
-                perguntasAgrupadas[item.idPergunta].respostas.push({
-                    text: item.resposta,
-                    hasChecked: item.correta == 1
-                })
-            })
-        }) 
-    }
+    // window.onload = () => {
+    //     fetch(`/quiz/perguntas`)
+    //     .then(res => res.json())
+    //     .then(data => {
+    //         const perguntasAgrupadas = {}
+    //         data.forEach(item => {
+    //             if(!perguntasAgrupadas[item.idPergunta]) {
+    //                 perguntasAgrupadas[item.idPergunta] = {
+    //                     pergunta: item.pergunta,
+    //                     respostas:[]
+    //                 }
+    //             }
+    //             perguntasAgrupadas[item.idPergunta].respostas.push({
+    //                 text: item.resposta,
+    //                 hasChecked: item.correta == 1
+    //             })
+    //         })
+    //     }) 
+    // }
 
 </script>
