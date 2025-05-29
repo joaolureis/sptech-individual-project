@@ -123,6 +123,7 @@
             alternativaD: "Ocean View",
             alternativaCorreta: "alternativaA"
         },
+
         {
             pergunta: "Qual é a identidade original da mãe de Steven?",
             alternativaA: "Pink Diamond",
@@ -131,6 +132,7 @@
             alternativaD: "Bismuth",
             alternativaCorreta: "alternativaA"
         },
+
         {
             pergunta: "Qual personagem humano é amigo próximo de Steven e trabalha com rosquinhas?",
             alternativaA: "Greg",
@@ -139,6 +141,7 @@
             alternativaD: "Ronaldo",
             alternativaCorreta: "alternativaB"
         },
+
         {
             pergunta: "O que acontece com a gema de Steven ao final da série Steven Universe Future?",
             alternativaA: "Ela se quebra",
@@ -147,6 +150,7 @@
             alternativaD: "Ela muda de cor",
             alternativaCorreta: "alternativaB"
         },
+
         {
             pergunta: "Qual fusão representa a união de Garnet, Amethyst e Pearl?",
             alternativaA: "Opal",
@@ -155,6 +159,7 @@
             alternativaD: "Stevonnie",
             alternativaCorreta: "alternativaB"
         },
+        
         {
             pergunta: "Quem é a melhor amiga humana de Steven e também treina espada com Pearl?",
             alternativaA: "Sadie",
@@ -370,5 +375,24 @@
 
     }
     
+    window.onload = () => {
+        fetch(`/quiz/perguntas`)
+        .then(res => res.json())
+        .then(data => {
+            const perguntasAgrupadas = {}
+            data.forEach(item => {
+                if(!perguntasAgrupadas[item.idPergunta]) {
+                    perguntasAgrupadas[item.idPergunta] = {
+                        pergunta: item.pergunta,
+                        respostas:[]
+                    }
+                }
+                perguntasAgrupadas[item.idPergunta].respostas.push({
+                    text: item.resposta,
+                    hasChecked: item.correta == 1
+                })
+            })
+        }) 
+    }
 
 </script>
