@@ -13,7 +13,7 @@ CREATE TABLE Usuario(
 idUsuario INT PRIMARY KEY auto_increment,
 nome VARCHAR(80) NOT NULL,
 senha VARCHAR(45) NOT NULL,
-email VARCHAR(45) NOT NULL
+email VARCHAR(45) NOT NULL UNIQUE
 );
 
 CREATE TABLE Quiz(
@@ -25,7 +25,7 @@ CREATE TABLE resultado(
 idResultado INT PRIMARY KEY auto_increment,
 fkQuiz INT,
 fkUsuario INT,
-dtResultado DATE,
+dtResultado DATETIME DEFAULT CURRENT_TIMESTAMP,
 pontos INT NOT NULL,
 	CONSTRAINT fkResultadoQuiz FOREIGN KEY (fkQuiz) REFERENCES Quiz(idQuiz),
     CONSTRAINT fkResultadoUsuario FOREIGN KEY (fkUsuario) REFERENCES Usuario(idUsuario) 
@@ -41,6 +41,7 @@ CONSTRAINT fkPerguntaQuiz FOREIGN KEY (fkQuiz) REFERENCES Quiz(idQuiz)
 CREATE TABLE alternativa(
 idAlternativa INT PRIMARY KEY auto_increment,
 fkPergunta INT,
+letra CHAR(1) NOT NULL,
 resposta VARCHAR(100),
 correta TINYINT NOT NULL,
 	CONSTRAINT fkAlternativaPergunta FOREIGN KEY (fkPergunta) REFERENCES Pergunta(idPergunta)
@@ -82,7 +83,6 @@ INSERT INTO Pergunta VALUES
 (default, 'Como Steven geralmente cura outras pessoas ou Gems?', 1),
 (default, 'Quem é responsável pela arte visual única de Steven Universe?', 1),
 (default, 'Quem é Spinel na história?', 1);
-
 
 -- Pergunta 1: Qual é a fusão entre Ruby e Sapphire?
 INSERT INTO Alternativa (fkPergunta, letra, resposta, correta) VALUES
