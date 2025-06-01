@@ -34,7 +34,7 @@ function buscarMaiorPontuacao(req, res) {
 function buscarMenorPontuacao(req, res) {
     const idUsuario = req.params.idUsuario;
 
-    dashModel.buscarMaiorPontuacao(idUsuario)
+    dashModel.buscarMenorPontuacao(idUsuario)
         .then(resultados => {
             if (resultados.length > 0) {
                 res.status(200).json(resultados);
