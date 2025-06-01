@@ -2,28 +2,6 @@ const dataGraphicTempFaixaPercentual = document.getElementById('graphic-tempMedi
 const dataGraphicStatusFermentar = document.getElementById('graphic-statusFermenter')
 
 var data = [6, 87, 7];
-/*var ipa = btn_ipa;
-var pilsen = btn_pilsen;
-
-function verIPA() {
-    chartTemp.data.datasets[0].data = [6, 87, 7];
-    chartTemp.data.labels = ['Abaixo de 16°C', '18°C a 22°C', 'Acima de 24°C']
-    filter_ipa_pilsen.innerHTML = `
-        <button class="check" onclick="verIPA()" id="btn_ipa">IPA</button>
-        <button class="" onclick="verPilsen()" id="btn_pilsen">Pilsen</button>
-    `
-    chartTemp.update();
-}
-
-function verPilsen() {
-    chartTemp.data.datasets[0].data = [14, 85, 5];
-    chartTemp.data.labels = ['Abaixo de 6°C', '8°C a 12°C', 'Acima de 14°C']
-    filter_ipa_pilsen.innerHTML = `
-        <button class="" onclick="verIPA()" id="btn_ipa">IPA</button>
-        <button class="check" onclick="verPilsen()" id="btn_pilsen">Pilsen</button>
-    `
-    chartTemp.update();
-}*/
 
 var chartTemp = new Chart(dataGraphicTempFaixaPercentual, {
     type: 'bar',
@@ -83,7 +61,7 @@ new Chart(dataGraphicStatusFermentar, {
                 '#66BB6A',
                 '#EF5350',
                 '#FFCA28'
-              ],                         
+            ],
             hoverOffset: 3
         }]
     },

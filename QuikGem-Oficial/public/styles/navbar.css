@@ -1,112 +1,113 @@
-
 html {
   scroll-behavior: smooth;
 }
 
 .header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;  /*Deixa a nav fixa*/
-    width: 100%;
-    z-index: 1;
-    height: 100px;
-    padding-left: 5%;
-    padding-right: 5%;
-    background: linear-gradient(rgba(0, 0, 0, 0.897), rgba(0, 0, 0, 0.568), rgba(0, 0, 0, 0));
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  /*Deixa a nav fixa*/
+  width: 100%;
+  z-index: 1;
+  height: 100px;
+  padding-left: 5%;
+  padding-right: 5%;
+  background: linear-gradient(rgba(0, 0, 0, 0.897), rgba(0, 0, 0, 0.568), rgba(0, 0, 0, 0));
+}
 
-  .header .container img{
-    width: 80px; 
-    height: auto;
-  }
+.header .container img {
+  width: 80px;
+  height: auto;
+}
 
-  .navbar {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    width: 90%;
-    
-  }
-  .navbar li{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 15px;
-    
-  }
-  
-  .header .container .navbar a{
-    font-weight: 500;
-    color:  rgba(253, 253, 247, 1);
-    text-decoration: none;
-    font-size: 15px;
-  
-  }
-  .menu-center {
-    display: flex;
-    justify-content: center; 
-    padding-left: 36%;
-  }
-  
-  .menu-right {
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-  }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
 
-  #home {
-    font-weight: 550;
-  }
+}
 
-  #contato {
-    font-weight: 550;
-  }
+.navbar li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
 
-  #Quiz {
-    font-weight: 550;
-  }
-  
-  #login,
-  #cadastro {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 600;
-    color: #000000;
-    background-color: rgba(252, 252, 231);
-    border-radius: 7px;
-    height: 28px;
-    width: 80px;
-    border: rgb(252, 252, 231) solid 3px;
-    transition: background-color 0.4s ease;
-  
-  }
-  
-  #login:hover {
-    background-color: #000000;
-    color: #ffffff;
-    font-weight: 600;
-  
-  }
-  
-  #cadastro {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 600;
-    color: rgba(252, 252, 231);
-    background-color: #000000;
-    border-radius: 7px;
-    height: 28px;
-    width: 80px;
-    border: #000000 solid 3px;
-    transition: background-color 0.4s ease;
-  
-  }
-  
-  #cadastro:hover {
-    background-color:  rgba(252, 252, 231);
-    color: #000000;
-    font-weight: 600;
-  }
+}
+
+.header .container .navbar a {
+  font-weight: 500;
+  color: rgba(253, 253, 247, 1);
+  text-decoration: none;
+  font-size: 15px;
+
+}
+
+.menu-center {
+  display: flex;
+  justify-content: center;
+  padding-left: 36%;
+}
+
+.menu-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#home {
+  font-weight: 550;
+}
+
+#contato {
+  font-weight: 550;
+}
+
+#Quiz {
+  font-weight: 550;
+}
+
+#login,
+#cadastro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  color: #000000;
+  background-color: rgba(252, 252, 231);
+  border-radius: 7px;
+  height: 28px;
+  width: 80px;
+  border: rgb(252, 252, 231) solid 3px;
+  transition: background-color 0.4s ease;
+
+}
+
+#login:hover {
+  background-color: #000000;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+#cadastro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  color: rgba(252, 252, 231);
+  background-color: #000000;
+  border-radius: 7px;
+  height: 28px;
+  width: 80px;
+  border: #000000 solid 3px;
+  transition: background-color 0.4s ease;
+
+}
+
+#cadastro:hover {
+  background-color: rgba(252, 252, 231);
+  color: #000000;
+  font-weight: 600;
+}

@@ -1,412 +1,413 @@
  /*---------Para resetar CSS--------*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-}
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   text-decoration: none;
+ }
 
-* {
-    font-family: "Barlow", sans-serif;
-    font-weight: 80;
-    font-style: normal;
-}
+ * {
+   font-family: "Barlow", sans-serif;
+   font-weight: 80;
+   font-style: normal;
+ }
 
 
+ /*----HOME 1----*/
 
-/*----HOME 1----*/
+ html,
+ body {
+   width: 100%;
+   margin: 0;
+   padding: 0;
 
-html, body {
-  width: 100%;
-  margin: 0; padding: 0;
-  
-}
+ }
 
-html {
-  scroll-behavior: smooth; /* a transição entre as seções seria feita de forma suave */
-  }
-  
-  body {
-    margin: 0;
-  
-  }
-  
-  .home {
-    background-image: url(../assets/imgs/imghome.svg);
-    height: 840px;
-    background-size: 100%;
-    background-repeat: no-repeat;
-  }
+ html {
+   scroll-behavior: smooth;
+   /* a transição entre as seções seria feita de forma suave */
+ }
 
-  .header{  
-    width: 100%;
-    height: 80px;
-  }
+ body {
+   margin: 0;
 
-  .banner {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 85.6%; 
-    overflow: hidden; /*Garante que nada ultrapasse visualmente a área do banner.*/
-  
- 
-  }
+ }
 
-  .banner #container img{
-    width: 30%;
-  }
-  
-  .banner #container {
-    position: absolute;
-    top: 140px;
-    right: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  } 
+ .home {
+   background-image: url(../assets/imgs/imghome.svg);
+   height: 840px;
+   background-size: 100%;
+   background-repeat: no-repeat;
+ }
 
-  .banner .container2 {
-    position: absolute;
-    right: 50px;
-    bottom: 0px;
+ .header {
+   width: 100%;
+   height: 80px;
+ }
+
+ .banner {
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: 85.6%;
+   overflow: hidden;
+   /*Garante que nada ultrapasse visualmente a área do banner.*/
+
+
+ }
+
+ .banner #container img {
+   width: 30%;
+ }
+
+ .banner #container {
+   position: absolute;
+   top: 140px;
+   right: 15px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+ }
+
+ .banner .container2 {
+   position: absolute;
+   right: 50px;
+   bottom: 0px;
    display: flex;
    align-items: flex-end;
    justify-content: flex-end;
    width: 40%;
-  } 
+ }
 
  .banner .container2 img {
-    bottom: 10px;
-    width: 60%;
-    object-fit: contain; /* Garante que as imagens dentro do container não sejam distorcidas*/
+   bottom: 10px;
+   width: 60%;
+   object-fit: contain;
+   /* Garante que as imagens dentro do container não sejam distorcidas*/
  }
 
 
 
  /*-----Boas Vindas!-----*/
 
-.boas-vindas .container {
-  position: absolute;
-  top: 510px;
-  right: 380px;
-  justify-content: center;
-  align-items: center;
-}
+ .boas-vindas .container {
+   position: absolute;
+   top: 510px;
+   right: 380px;
+   justify-content: center;
+   align-items: center;
+ }
 
-.boas-vindas .container .texto h1 {
-  color: rgb(53, 34, 157);
-  font-size: 28px;
-  font-weight: 700;
-  padding-bottom: 20px;
-  width: 250px;
-}
+ .boas-vindas .container .texto h1 {
+   color: rgb(53, 34, 157);
+   font-size: 28px;
+   font-weight: 700;
+   padding-bottom: 20px;
+   width: 250px;
+ }
 
-.boas-vindas .container .texto p {
-  color: #000000;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 1.5;
-}
+ .boas-vindas .container .texto p {
+   color: #000000;
+   font-size: 20px;
+   font-weight: 400;
+   line-height: 1.5;
+ }
 
-.boas-vindas .container .texto button {
-  background: rgb(48, 36, 116)   ;
-  border: none;
-  margin-top: 25px;
-  width: 120px;
-  height: 45px;
-  border-radius: 5px;
-  font-size: 20px;
-  font-weight: 500;
-}
+ .boas-vindas .container .texto button {
+   background: rgb(48, 36, 116);
+   border: none;
+   margin-top: 25px;
+   width: 120px;
+   height: 45px;
+   border-radius: 5px;
+   font-size: 20px;
+   font-weight: 500;
+ }
 
-.boas-vindas .container .texto button a{
-  color: rgba(255, 255, 247, 1);
-  font-weight: 600;
-}
+ .boas-vindas .container .texto button a {
+   color: rgba(255, 255, 247, 1);
+   font-weight: 600;
+ }
 
-.boas-vindas .container .texto  {
-  position: absolute;
-  background: rgba(255, 255, 247, 1);
-  color: #000;
-  border-radius: 14px;
-  max-width: 760px;
-  padding: 38px;
-  text-align: flex-start;
-  position: relative;
-  transition: 0.3s ease;
-  background-repeat: no-repeat;
-}
+ .boas-vindas .container .texto {
+   position: absolute;
+   background: rgba(255, 255, 247, 1);
+   color: #000;
+   border-radius: 14px;
+   max-width: 760px;
+   padding: 38px;
+   text-align: flex-start;
+   position: relative;
+   transition: 0.3s ease;
+   background-repeat: no-repeat;
+ }
 
-#botao-home:hover{
-  background-color:rgb(61, 47, 137) ;
-}
+ #botao-home:hover {
+   background-color: rgb(61, 47, 137);
+ }
 
-.card:hover{
-  transform: scale(1.1);
-}
+ .card:hover {
+   transform: scale(1.1);
+ }
 
-/*------CONTEXTO------*/
+ /*------CONTEXTO------*/
 
-.contexto {
-  background-color: rgba(255, 255, 247, 1);
-  display: flex;
-  width: 100%;
-  height: 600px;
-}
+ .contexto {
+   background-color: rgba(255, 255, 247, 1);
+   display: flex;
+   width: 100%;
+   height: 600px;
+ }
 
-.contexto .container {
-  padding-top: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+ .contexto .container {
+   padding-top: 100px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
 
-.contexto .container .texto {
-  margin-left: 80px;
-  margin-right: 200px;
-  align-items: center;
-}
+ .contexto .container .texto {
+   margin-left: 80px;
+   margin-right: 200px;
+   align-items: center;
+ }
 
-.contexto .container .texto h1 {
-  color: #000000;
-  font-size: 30px;
-  font-weight: 700;
-  width: 100%;
-}
+ .contexto .container .texto h1 {
+   color: #000000;
+   font-size: 30px;
+   font-weight: 700;
+   width: 100%;
+ }
 
-.contexto .container .texto p {
-  color: #000000;
-  font-size: 23px;
-  font-weight: 400;
-  line-height: 1.6;
-  margin-top: 4%;
-}
+ .contexto .container .texto p {
+   color: #000000;
+   font-size: 23px;
+   font-weight: 400;
+   line-height: 1.6;
+   margin-top: 4%;
+ }
 
-.contexto .container .imagem{
-  padding-right: 60px;
-}
+ .contexto .container .imagem {
+   padding-right: 60px;
+ }
 
-.contexto .container img{
-  width: 540px;
-}
-
-
-
-/*-------PONTOS FORTES--------*/
-
-.historia{
-  background-color: rgba(255, 255, 247, 1);
-  display: flex;
-  width: 100%;
-  height: 600px;
-}
-
-.historia .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-
-.historia .container .texto {
-  margin-left: 300px;
-  align-items: center;
-}
-
-.historia .container .texto h1 {
-  color: rgb(0, 0, 0);
-  font-size: 34px;
-  font-weight: 700;
-  padding-bottom: 25px;
-  width: 600px;
-
-}
-
-.historia .container .texto p {
-  color: #000000;
-  font-size: 23px;
-  font-weight: 400;
-  line-height: 1.6;
-}
-
-.historia .container img {
-  width: 500px;
-}
-
-.historia .container .imagem{
-  padding-left: 94px;
-}
-
-
-.historia .container .texto button {
-  background: #220b67 ;
-  border: none;
-  margin-top: 25px;
-  width: 380px;
-  height: 45px;
-  border-radius: 5px;
-  font-size: 20px;
-  font-weight: 500;
-    color: #ffffff;
-}
-
-/*-----------HISTORIA X DESENVOLVEDOR-------------*/
-.desenvolvedor{
-  background-color: rgba(255, 255, 247, 1);
-  background-image: url(../assets/imgs/desenvolvedor.svg);
-  overflow: hidden;
-  display: flex;
-  min-width: 100%;
-  height: 700px;
-}
-
-.desenvolvedor .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-
-.desenvolvedor .container .texto {
-  margin-left: 60px;
-  margin-right: 60px;
-  align-items: center;
-}
-
-.desenvolvedor .container .texto h1 {
-  color: rgba(255, 255, 247, 1);
-  font-size: 44px;
-  font-weight: 700;
-  padding-bottom: 25px;
-  width: 600px;
-
-}
-
-.desenvolvedor .container .texto p {
-  color: rgba(255, 255, 247, 1);
-  font-size: 23px;
-  font-weight: 400;
-  line-height: 1.6;
-}
-
-.desenvolvedor .container img {
-  width: 600px;
-}
-
-
-/*-------PERSONAGENS--------*/
-
-.personagens .container {
-  background-color: rgba(255, 255, 247, 1);
-  background-repeat: no-repeat;
-  height: 400px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.card {
-      width: 240px;
-      height: 300px;
-      perspective: 1000px;
-    }
-
-    .card-inner {
-      width: 100%;
-      height: 100%;
-      position: relative;
-      transform-style: preserve-3d;
-      transition: transform 0.6s;
-    }
-
-    .card:hover .card-inner {
-      transform: rotateY(180deg);
-    }
-
-    .card-front, .card-back {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      backface-visibility: hidden;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      background: rgba(255, 255, 247, 1);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 10px;
-    }
-
-    .card-front img {
-      width: 90%;
-    }
-
-    .card-back {
-      transform: rotateY(180deg);
-      background: #d1c4e9;
-    }
-
-    .flip-btn {
-      margin-top: 15px;
-      padding: 5px 10px;
-      border: none;
-      background-color: #7e57c2;
-      color: white;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .flip-btn:hover {
-      background-color: #5e35b1;
-    }
-
-    .personagens h1{
-      background-color: rgba(255, 255, 247, 1);
-      padding: 40px;
-      font-size: 20px;
-      font-weight: 600;
-    }
-
-/*-------Footer--------*/
-.container-footer {
-  background-color: rgb(0, 0, 0);
-  display: flex;
-  border-top: 1px solid white; /* define a borda inferior de um elemento */
-  width: 100%;
-  height: 84px;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.container-footer p{
-  color: #ffffff;
-  font-size: 12px;
-}
-
-.container-footer .img-logo{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  padding-left: 5%;
-  padding-right: 5%;
-}
-
-.container-footer .redesocial {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  padding-left: 5%;
-  padding-right: 5%;
-}
+ .contexto .container img {
+   width: 540px;
+ }
 
 
 
+ /*-------PONTOS FORTES--------*/
+
+ .historia {
+   background-color: rgba(255, 255, 247, 1);
+   display: flex;
+   width: 100%;
+   height: 600px;
+ }
+
+ .historia .container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+ }
+
+ .historia .container .texto {
+   margin-left: 300px;
+   align-items: center;
+ }
+
+ .historia .container .texto h1 {
+   color: rgb(0, 0, 0);
+   font-size: 34px;
+   font-weight: 700;
+   padding-bottom: 25px;
+   width: 600px;
+
+ }
+
+ .historia .container .texto p {
+   color: #000000;
+   font-size: 23px;
+   font-weight: 400;
+   line-height: 1.6;
+ }
+
+ .historia .container img {
+   width: 500px;
+ }
+
+ .historia .container .imagem {
+   padding-left: 94px;
+ }
 
 
+ .historia .container .texto button {
+   background: #220b67;
+   border: none;
+   margin-top: 25px;
+   width: 380px;
+   height: 45px;
+   border-radius: 5px;
+   font-size: 20px;
+   font-weight: 500;
+   color: #ffffff;
+ }
+
+ /*-----------HISTORIA X DESENVOLVEDOR-------------*/
+ .desenvolvedor {
+   background-color: rgba(255, 255, 247, 1);
+   background-image: url(../assets/imgs/desenvolvedor.svg);
+   overflow: hidden;
+   display: flex;
+   min-width: 100%;
+   height: 700px;
+ }
+
+ .desenvolvedor .container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+ }
+
+ .desenvolvedor .container .texto {
+   margin-left: 60px;
+   margin-right: 60px;
+   align-items: center;
+ }
+
+ .desenvolvedor .container .texto h1 {
+   color: rgba(255, 255, 247, 1);
+   font-size: 44px;
+   font-weight: 700;
+   padding-bottom: 25px;
+   width: 600px;
+
+ }
+
+ .desenvolvedor .container .texto p {
+   color: rgba(255, 255, 247, 1);
+   font-size: 23px;
+   font-weight: 400;
+   line-height: 1.6;
+ }
+
+ .desenvolvedor .container img {
+   width: 600px;
+ }
+
+
+ /*-------PERSONAGENS--------*/
+
+ .personagens .container {
+   background-color: rgba(255, 255, 247, 1);
+   background-repeat: no-repeat;
+   height: 400px;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+   justify-content: center;
+ }
+
+ .card {
+   width: 240px;
+   height: 300px;
+   perspective: 1000px;
+ }
+
+ .card-inner {
+   width: 100%;
+   height: 100%;
+   position: relative;
+   transform-style: preserve-3d;
+   transition: transform 0.6s;
+ }
+
+ .card:hover .card-inner {
+   transform: rotateY(180deg);
+ }
+
+ .card-front,
+ .card-back {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   backface-visibility: hidden;
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   background: rgba(255, 255, 247, 1);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   padding: 10px;
+ }
+
+ .card-front img {
+   width: 90%;
+ }
+
+ .card-back {
+   transform: rotateY(180deg);
+   background: #d1c4e9;
+ }
+
+ .flip-btn {
+   margin-top: 15px;
+   padding: 5px 10px;
+   border: none;
+   background-color: #7e57c2;
+   color: white;
+   border-radius: 5px;
+   cursor: pointer;
+ }
+
+ .flip-btn:hover {
+   background-color: #5e35b1;
+ }
+
+ .personagens h1 {
+   background-color: rgba(255, 255, 247, 1);
+   padding: 40px;
+   font-size: 20px;
+   font-weight: 600;
+ }
+
+ /*-------Footer--------*/
+ .container-footer {
+   background-color: rgb(0, 0, 0);
+   display: flex;
+   border-top: 1px solid white;
+   /* define a borda inferior de um elemento */
+   width: 100%;
+   height: 84px;
+   align-items: center;
+   justify-content: space-between;
+ }
+
+ .container-footer p {
+   color: #ffffff;
+   font-size: 12px;
+ }
+
+ .container-footer .img-logo {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+   padding-left: 5%;
+   padding-right: 5%;
+ }
+
+ .container-footer .redesocial {
+   display: flex;
+   align-items: center;
+   gap: 20px;
+   padding-left: 5%;
+   padding-right: 5%;
+ }

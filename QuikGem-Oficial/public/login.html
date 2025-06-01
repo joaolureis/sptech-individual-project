@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/assets/imgs/logo-final.png">
     <link rel="stylesheet" href="/styles/login.css">
-     <script src="./js/sessao.js"></script>
+    <script src="./js/sessao.js"></script>
 
     <title>Login - QuikGem</title>
 </head>
+
 <body>
-     <section class="container-cadastro">
+    <section class="container-cadastro">
         <div class="alerta_erro">
             <div class="card_erro" id="cardErro">
                 <span id="mensagem_erro"></span>
@@ -36,15 +38,15 @@
                     <button onclick="entrar(event)" class="botao">Login</button>
                 </div>
                 <div class="cad-login">
-                    <br><span>Não tem uma conta<a href="./cadastro.html">? Cadastre aqui!</a></span> 
+                    <br><span>Não tem uma conta<a href="./cadastro.html">? Cadastre aqui!</a></span>
                     <span><a href="./index.html">Sair</a></span>
                 </div>
-                 <div id="div_aguardar" class="loading-div">
+                <div id="div_aguardar" class="loading-div">
                     <img src="./assets/imgs/aguarde-pink.gif" id="loading-gif">
                 </div>
                 <div id="div_erros_login"></div>
             </div>
-             <div class="container2">
+            <div class="container2">
                 <img src="/assets/imgs/cadastro-login.png" alt="">
             </div>
         </div>
@@ -53,6 +55,7 @@
 
     <div id="div_mensagem"></div>
 </body>
+
 </html>
 <script>
     function entrar() {
@@ -89,14 +92,15 @@
             if (resposta.ok) {
                 console.log(resposta);
                 mensagem_erro.innerHTML =
-                        "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+                    "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
                 resposta.json().then(json => {
                     console.log(json);
                     console.log(JSON.stringify(json));
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.nome;
-                    sessionStorage.ID_USUARIO = json.id;
+                    sessionStorage.ID_USUARIO = json.idUsuario;
+
 
                     setTimeout(function () {
                         window.location = "./dashboard/dashboard.html";

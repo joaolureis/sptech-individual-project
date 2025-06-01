@@ -1,27 +1,27 @@
 /*---------Para resetar CSS--------*/
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
 }
 
 * {
-    font-family: "Barlow", sans-serif;
-    font-weight: 80;
-    font-style: normal;
+  font-family: "Barlow", sans-serif;
+  font-weight: 80;
+  font-style: normal;
 }
 
 html,
 body {
-    width: 100%;
-    margin: 0;
-    padding: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    scroll-behavior: smooth;
-    /* a transição entre as seções feita de forma suave */
+  scroll-behavior: smooth;
+  /* a transição entre as seções feita de forma suave */
 }
 
 body {
@@ -29,101 +29,104 @@ body {
 }
 
 .container-cadastro {
-    display: flex;
-    height: 100vh;
-    width: 100%;
+  display: flex;
+  height: 100vh;
+  width: 100%;
 }
 
 .container-cadastro .card {
-    display: flex;
-    width: 100%;
-    height: 100%;
+  display: flex;
+  width: 100%;
+  height: 100%;
 }
 
-.container-cadastro input{
-    background: rgba(253, 253, 247, 1);
+.container-cadastro input {
+  background: rgba(253, 253, 247, 1);
 }
 
-.container-cadastro h2{
-    font-weight: 600;
+.container-cadastro h2 {
+  font-weight: 600;
 }
 
-.container-cadastro .campo span{
-    font-weight: 550;
+.container-cadastro .campo span {
+  font-weight: 550;
 }
 
 .container-cadastro .container2 {
-    flex: 1;
-    position: relative;
-    overflow: hidden;
-    background-color: rgb(176, 179, 3); /* sobreposição amarelo */
-    background-color: rgb(0, 0, 0) /* sobreposição preto */
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  background-color: rgb(176, 179, 3);
+  /* sobreposição amarelo */
+  background-color: rgb(0, 0, 0)
+    /* sobreposição preto */
 }
 
 .container-cadastro .container2 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
 }
 
 .container-cadastro .card-campo {
-    flex: 0.6;
-    background-color: rgba(253, 253, 247, 1);
-    padding: 6px;
-    padding-left: 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    line-height: 1.0;
+  flex: 0.6;
+  background-color: rgba(253, 253, 247, 1);
+  padding: 6px;
+  padding-left: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.0;
 
 }
 
 .card-campo input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 80%;
 }
 
 .botao {
-    background-color: #000000;
-    color: rgba(253, 253, 247, 1);
-    padding: 12px;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    cursor: pointer;
-    width: 80%;
+  background-color: #000000;
+  color: rgba(253, 253, 247, 1);
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 80%;
 }
 
 .botao:hover {
-    background-color: #1d1e1e;
+  background-color: #1d1e1e;
 }
 
 .descricao span {
-    font-size: 12px;
-    color: #555;
+  font-size: 12px;
+  color: #555;
 }
 
-.cad-login span, .cad-login a {
-    display: flex;
-    justify-content: center;
-    padding-right: 50px;
-    font-size: 14px;
-    color: #000000;
+.cad-login span,
+.cad-login a {
+  display: flex;
+  justify-content: center;
+  padding-right: 50px;
+  font-size: 14px;
+  color: #000000;
 }
 
 .cad-login {
-    line-height: 1.8;
+  line-height: 1.8;
 }
 
-.cad-login a{
-    color:rgb(76, 54, 125)
+.cad-login a {
+  color: rgb(76, 54, 125)
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .loading-div {
@@ -142,7 +145,7 @@ a:hover {
 
 /* FORMULARIO */
 
-.alerta_erro{
+.alerta_erro {
   display: flex;
   justify-content: flex-end;
   z-index: 9999;
@@ -160,7 +163,7 @@ a:hover {
   margin-right: 10%;
 }
 
-.card_erro #mensagem_erro{
+.card_erro #mensagem_erro {
   font-weight: 500;
   font-size: 20px;
 }
@@ -209,6 +212,3 @@ input {
   height: 50px;
   width: 50px;
 }
-
-
-
