@@ -61,10 +61,34 @@ console.log("Executando a instrução SQL: \n" + instrucaoSql);
 return database.executar(instrucaoSql);
 }
 
+function distribuicaoPorDesempenho(){
+    const instrucaoSql = `SELECT 
+  CASE 
+    WHEN pontos >= 9 THEN 'Excelente'
+    WHEN pontos >= 7 THEN 'Bom'
+    WHEN pontos >= 5 THEN 'Regular'
+    ELSE 'Ruim'
+  END AS desempenho,
+  COUNT(*) AS quantidade
+FROM Resultado
+GROUP BY desempenho
+ORDER BY 
+  CASE 
+    WHEN desempenho = 'Excelente' THEN 1
+    WHEN desempenho = 'Bom' THEN 2
+    WHEN desempenho = 'Regular' THEN 3
+    ELSE 4
+  END;`
+
+  return database.executar(instrucaoSql);
+  
+}
+
 
 module.exports = {
     buscarMaiorPontuacao,
     buscarMenorPontuacao,
     buscarMediaPontuacao,
-    buscarUsuariosPontuacoes
+    buscarUsuariosPontuacoes,
+    distribuicaoPorDesempenho
 }

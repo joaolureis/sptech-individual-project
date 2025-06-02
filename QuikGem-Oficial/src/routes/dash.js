@@ -11,4 +11,6 @@ router.get("/buscarMenorPontuacao/:idUsuario", function (req, res) {dashControll
 
 router.get("/buscarMediaPontuacao", function (req, res) {dashController.buscarMediaPontuacao(req, res);});
 
+router.get("/distribuicaoPorDesempenho", function (req, res) {dashController.distribuicaoPorDesempenho(req, res);});
+
 module.exports = router;

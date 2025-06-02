@@ -51,4 +51,55 @@ fetch(`/dash/buscarMediaPontuacao`)
   })
   .catch(err => console.error('Erro ao buscar média de pontuação:', err));
 
+fetch('/dash/DistribuicaoPorDesempenho')
+  .then(res => res.json())
+  .then(data => {
+    console.log("Dados recebidos:", data);
+
+    let desempenhoLabels = [];
+    let desempenhoCounts = [];
+
+    // Caso data seja um array (formato ideal: [{categoria: 'Excelente', quantidade: 5}, ...])
+    if (Array.isArray(data)) {
+      desempenhoLabels = data.map(item => item.desempenho || item.categoria);
+      desempenhoCounts = data.map(item => item.quantidade);
+    }
+    // Caso data seja um objeto: {Excelente: 5, Bom: 3, Ruim: 2}
+    else if (typeof data === 'object') {
+      desempenhoLabels = Object.keys(data);
+      desempenhoCounts = Object.values(data);
+    } else {
+      throw new Error('Formato inesperado de dados recebidos');
+    }
+
+    const ctx = document.getElementById('grafico2').getContext('2d');
+
+    new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels: desempenhoLabels,
+        datasets: [{
+          label: 'Distribuição por Desempenho',
+          data: desempenhoCounts,
+          backgroundColor: [
+            '#4caf50',
+            '#2196f3',
+            '#ff9800',
+            '#f44336'
+          ],
+          borderColor: '#fff',
+          borderWidth: 2,
+        }]
+      },
+      options: {
+        responsive: false,
+        plugins: {
+          legend: { position: 'left' },
+          tooltip: { enabled: true }
+        }
+      }
+    });
+  })
+  .catch(err => console.error('Erro ao buscar distribuição por desempenho:', err));
+
 

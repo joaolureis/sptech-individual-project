@@ -59,9 +59,20 @@ function buscarMediaPontuacao(req, res) {
     });
 }
 
+function distribuicaoPorDesempenho(req,res){
+
+    dashModel.distribuicaoPorDesempenho()
+    .then(resultado => res.status(200).json(resultado[0]))
+    .catch(erro => {
+        console.erro("Erro ao buscar a distribuiçaõ por desempenho", erro);
+        res.status(500).json({ erro: "Erro ao buscar a distribuição por desempenho." });
+    })
+}
+
 module.exports = {
     buscarMaiorPontuacao,
     buscarMenorPontuacao,
     buscarMediaPontuacao,
-    buscarUsuariosPontuacoes
+    buscarUsuariosPontuacoes,
+    distribuicaoPorDesempenho
 }
