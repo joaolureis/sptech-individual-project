@@ -81,6 +81,8 @@
         var senhaVar = input_senha.value;
         var confirmacaoSenhaVar = input_confirmação.value;
 
+        var temTamanho = senhaVar.length >= 8
+
         // Verificando se há algum campo em branco
         if (
             nomeVar == "" ||
@@ -99,6 +101,13 @@
 
             cardErro.style.display = "block";
             mensagem_erro.innerHTML = `<style="color: red;">Preencha um E-mail válido</style>`
+
+            finalizarAguardar();
+            return false;
+
+        } else if (temTamanho == false){
+            cardErro.style.display = "block";
+            mensagem_erro.innerHTML = `<style="color: red;">Senha fraca, necessita de pelo menos 8 caracteres</style>`
 
             finalizarAguardar();
             return false;
