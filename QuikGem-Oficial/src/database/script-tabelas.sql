@@ -11,7 +11,7 @@ USE steven;
 
 CREATE TABLE Usuario(
 idUsuario INT PRIMARY KEY auto_increment,
-nome VARCHAR(80) NOT NULL,
+nome VARCHAR(80) NOT NULL UNIQUE,
 senha VARCHAR(45) NOT NULL,
 email VARCHAR(45) NOT NULL UNIQUE
 );
@@ -48,10 +48,10 @@ correta TINYINT NOT NULL,
 ); 
 
 INSERT INTO Usuario VALUES 
-(default, 'João Lucas','123456*','joao.lcarvalho@sptech.school'),
-(default, 'Maria Eduarda','1598532&','maria@sptech.school'),
-(default, 'Regiane','147258//','regiane@sptech.school'),
-(default, 'Rodrigo','sptech123@','rodrigo@sptech.school');
+(default, 'João Lucas','123456*J','joao.lcarvalho@sptech.school'),
+(default, 'Maria Eduarda','1598532&L','maria@sptech.school'),
+(default, 'Regiane','147258//O','regiane@sptech.school'),
+(default, 'Rodrigo','Sptech123@','rodrigo@sptech.school');
 
 INSERT INTO Quiz VALUES
 (default, 'Steven Universe - Quiz');
@@ -223,3 +223,4 @@ INSERT INTO Alternativa (fkPergunta, letra, resposta, correta) VALUES
 (20, 'B', 'Uma amiga esquecida de Pink Diamond', 1),
 (20, 'C', 'Uma filha de White Diamond', 0),
 (20, 'D', 'Uma invenção humana', 0);
+
