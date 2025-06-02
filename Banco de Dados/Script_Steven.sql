@@ -1,16 +1,11 @@
-DROP TABLE Usuario;
-DROP TABLE Resultado;
-DROP TABLE Quiz;
-DROP TABLE respostahist;
-DROP TABLE Pergunta;
-DROP TABLE alternativa;
 
+DROP DATABASE steven;
 CREATE DATABASE steven;
 USE steven;
 
 CREATE TABLE Usuario(
 idUsuario INT PRIMARY KEY auto_increment,
-nome VARCHAR(80) NOT NULL,
+nome VARCHAR(80) NOT NULL UNIQUE,
 senha VARCHAR(45) NOT NULL,
 email VARCHAR(45) NOT NULL UNIQUE
 );
@@ -24,7 +19,7 @@ CREATE TABLE resultado(
 idResultado INT PRIMARY KEY auto_increment,
 fkQuiz INT,
 fkUsuario INT,
-dtResultado DATE,
+dtResultado DATETIME DEFAULT CURRENT_TIMESTAMP,
 pontos INT NOT NULL,
 	CONSTRAINT fkResultadoQuiz FOREIGN KEY (fkQuiz) REFERENCES Quiz(idQuiz),
     CONSTRAINT fkResultadoUsuario FOREIGN KEY (fkUsuario) REFERENCES Usuario(idUsuario) 
@@ -47,10 +42,10 @@ correta TINYINT NOT NULL,
 ); 
 
 INSERT INTO Usuario VALUES 
-(default, 'João Lucas','123456*','joao.lcarvalho@sptech.school'),
-(default, 'Maria Eduarda','1598532&','maria@sptech.school'),
-(default, 'Regiane','147258//','regiane@sptech.school'),
-(default, 'Rodrigo','sptech123@','rodrigo@sptech.school');
+(default, 'João Lucas','123456*J','joao.lcarvalho@sptech.school'),
+(default, 'Maria Eduarda','1598532&L','maria@sptech.school'),
+(default, 'Regiane','147258//O','regiane@sptech.school'),
+(default, 'Rodrigo','Sptech123@','rodrigo@sptech.school');
 
 INSERT INTO Quiz VALUES
 (default, 'Steven Universe - Quiz');
@@ -238,3 +233,7 @@ a.correta
     ) as p
     JOIN alternativa a
     ON a.fkPergunta = p.idPergunta;
+    
+SELECT * FROM Resultado;
+SELECT * FROM Usuario;
+
