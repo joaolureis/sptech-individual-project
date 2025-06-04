@@ -51,23 +51,23 @@ fetch(`/dash/buscarMediaPontuacao`)
   })
   .catch(err => console.error('Erro ao buscar média de pontuação:', err));
 
-fetch('/dash/DistribuicaoPorDesempenho')
+fetch('/dash/ParticipacaodosUsuarios')
   .then(res => res.json())
   .then(data => {
     console.log("Dados recebidos:", data);
 
-    let desempenhoLabels = [];
-    let desempenhoCounts = [];
+    let realizadas = [];
+    let nao_realizadas = [];
 
     // Caso data seja um array (formato ideal: [{categoria: 'Excelente', quantidade: 5}, ...])
     if (Array.isArray(data)) {
-      desempenhoLabels = data.map(item => item.desempenho || item.categoria);
-      desempenhoCounts = data.map(item => item.quantidade);
+      realizadas = data.map(item => item.realizadas);
+      nao_realizadas = data.map(item => item.naoRealizadas);
     }
     // Caso data seja um objeto: {Excelente: 5, Bom: 3, Ruim: 2}
     else if (typeof data === 'object') {
-      desempenhoLabels = Object.keys(data);
-      desempenhoCounts = Object.values(data);
+      realizadas = Object.keys(data);
+      nao_realizadas = Object.values(data);
     } else {
       throw new Error('Formato inesperado de dados recebidos');
     }
@@ -77,10 +77,10 @@ fetch('/dash/DistribuicaoPorDesempenho')
     new Chart(ctx, {
       type: 'doughnut',
       data: {
-        labels: desempenhoLabels,
+        labels: realizadas,
         datasets: [{
           label: 'Distribuição por Desempenho',
-          data: desempenhoCounts,
+          data: nao_realizadas,
           backgroundColor: [
             '#4caf50',
             '#2196f3',
