@@ -115,7 +115,14 @@
             finalizarAguardar();
             return false;
 
-        } else {
+        }else if (senhaVar !== confirmacaoSenhaVar){
+            cardErro.style.display = "block";
+            mensagem_erro.innerHTML = `<style="color: red;">As senhas precisam ser as mesmas</style>`
+
+            finalizarAguardar();
+            return false; 
+
+            } else {
             setInterval(sumirMensagem, 5000);
         }
 
@@ -163,4 +170,6 @@
     function sumirMensagem() {
         cardErro.style.display = "none";
     }
+
+
 </script>

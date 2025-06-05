@@ -9,7 +9,7 @@ function buscarPerguntas(){
     a.resposta,
     a.correta
 	FROM ( SELECT idPergunta, descricao
-    FROM pergunta ORDER BY RAND()
+    FROM Pergunta ORDER BY RAND()
     LIMIT 10
     ) as p
     JOIN alternativa a

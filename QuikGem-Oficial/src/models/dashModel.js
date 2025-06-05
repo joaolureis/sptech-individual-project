@@ -6,8 +6,8 @@ SELECT
     fkQuiz AS Quiz,
     Usuario.nome AS Usuário,
     MAX(pontos) AS Pontuacao_Maxima
-FROM Resultado
-JOIN Usuario ON Resultado.fkUsuario = ${idUsuario}
+FROM resultado
+JOIN Usuario ON resultado.fkUsuario = ${idUsuario}
 GROUP BY fkQuiz, Usuario.nome
 Limit 1;`;
 
@@ -20,8 +20,8 @@ SELECT
     fkQuiz AS Quiz,
     Usuario.nome AS Usuário,
     MIN(pontos) AS pontuacao_minima
-FROM Resultado
-JOIN Usuario ON Resultado.fkUsuario = ${idUsuario}
+FROM resultado
+JOIN Usuario ON resultado.fkUsuario = ${idUsuario}
 GROUP BY fkQuiz, Usuario.nome
 Limit 1;`;
 
@@ -42,14 +42,14 @@ SELECT
     r.fkQuiz AS Quiz,
     u.nome AS Usuário,
     r.pontos AS Pontuação
-FROM Resultado r
+FROM resultado r
 JOIN Usuario u ON r.fkUsuario = u.idUsuario
 JOIN (
     SELECT fkUsuario, MAX(idResultado) AS idMax
-    FROM Resultado
+    FROM resultado
     WHERE (fkUsuario, pontos) IN (
         SELECT fkUsuario, MAX(pontos)
-        FROM Resultado
+        FROM resultado
         GROUP BY fkUsuario
     )
     GROUP BY fkUsuario
@@ -57,17 +57,20 @@ JOIN (
 ORDER BY r.pontos DESC
 LIMIT 10;`;
 
-console.log("Executando a instrução SQL: \n" + instrucaoSql);
-return database.executar(instrucaoSql);
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
 }
 
-function ParticipacaodosUsuarios(){
-    const instrucaoSql = `SELECT COUNT(DISTINCT fkusuario) as Realizados,
-   COUNT(*) - COUNT(DISTINCT fkusuario) as "Não Realizados"
-   FROM resultado RIGHT JOIN Usuario ON idusuario = fkusuario;`
+function ParticipacaodosUsuarios() {
+    const instrucaoSql = `
+    SELECT 
+        COUNT(r.fkUsuario) AS Realizados,
+        COUNT(u.idUsuario) - COUNT(r.fkUsuario) AS "Não Realizados"
+    FROM Usuario u
+        LEFT JOIN (SELECT DISTINCT fkUsuario FROM resultado) r ON u.idUsuario = r.fkUsuario;`
 
-  return database.executar(instrucaoSql);
-  
+    return database.executar(instrucaoSql);
+
 }
 
 
