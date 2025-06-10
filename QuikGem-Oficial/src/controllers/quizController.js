@@ -1,5 +1,10 @@
 var quizModel = require("../models/quizModel");
 
+// Chama a função buscarPerguntas() que está definida dentro do modelo (Model) quizModel.
+// Retorna os dados como JSON se tudo der certo.
+// E executa o SELECT.
+
+
 function buscarPerguntas(req, res) {
     quizModel.buscarPerguntas()
         .then(resultado => res.json(resultado))

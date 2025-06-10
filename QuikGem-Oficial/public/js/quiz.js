@@ -12,6 +12,7 @@ let idUsuario = sessionStorage.ID_USUARIO;
 StartQuiz.addEventListener("click", startGame)
 proximaQuestao.addEventListener("click", displayNextQuestion)
 
+//Verificação da Sessão
 if (!sessionStorage.ID_USUARIO) {
   console.error("ID de usuário não encontrado na sessão. Redirecionando para login...");
   window.location.href = "/login.html";
@@ -19,6 +20,10 @@ if (!sessionStorage.ID_USUARIO) {
   console.log("Usuário logado. ID:", sessionStorage.ID_USUARIO);
 }
 
+
+// Esconde o botão de iniciar.
+// Mostra o container das perguntas.
+// Mostra a primeira pergunta.
 function startGame() {
   StartQuiz.classList.add("hide")
   questaoContainer.classList.remove("hide")
@@ -60,6 +65,10 @@ function displayNextQuestion() {
   })
 }
 
+
+// VERIFICAÇÃO DA RESPOSTA
+// CONTABILIZA A PONTUAÇÃO
+
 function selectAnswer(event) {
   const answerClicked = event.target
 
@@ -85,6 +94,7 @@ function finishGame() {
   const totalQuestions = questions.length
   proximaQuestao.classList.add("hide")
   const performance = Math.floor(pontos * 100 / totalQuestions)
+  resultado.innerHTML = "";
 
   let message = ""
 
@@ -165,8 +175,7 @@ window.onload = () => {
         })
       })
 
-      questions = Object.values(perguntasAgrupadas)
-      displayNextQuestion()
+      questions = Object.values(perguntasAgrupadas) // Salva tudo no array questions.
     })
     .catch(err => console.error("Erro ao carregar perguntas:", err))
 }

@@ -59,12 +59,11 @@ fetch('/dash/ParticipacaodosUsuarios')
     let realizadas = [];
     let nao_realizadas = [];
 
-    // Caso data seja um array (formato ideal: [{categoria: 'Excelente', quantidade: 5}, ...])
     if (Array.isArray(data)) {
       realizadas = data.map(item => item.realizadas);
       nao_realizadas = data.map(item => item.naoRealizadas);
     }
-    // Caso data seja um objeto: {Excelente: 5, Bom: 3, Ruim: 2}
+    
     else if (typeof data === 'object') {
       realizadas = Object.keys(data);
       nao_realizadas = Object.values(data);

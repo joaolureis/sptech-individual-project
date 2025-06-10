@@ -1,5 +1,6 @@
 var database = require("../database/config");
 
+// Seleciona 10 perguntas aleatórias da tabela Pergunta e traz, junto com cada uma delas, todas as alternativas relacionadas, a partir da tabela alternativa.
 function buscarPerguntas(){
     const instrucaoSql = `
     SELECT p.idPergunta,
@@ -18,6 +19,7 @@ function buscarPerguntas(){
     console.log("Executando a Instrução Sql: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
 }
+
 
 function cadastrarPontos(idUsuario, fkQuiz, pontos){
     const instrucao = `
