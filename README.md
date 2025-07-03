@@ -1,31 +1,39 @@
-# 🌟 QuikGem – Projeto Individual
+# QuikGem – Projeto Individual
 
-## ✨ Sobre
+## Sobre o Projeto
 
-## **Sobre o projeto:**
+**QuikGem** é um projeto pessoal desenvolvido durante o **1º semestre** do curso de **Análise e Desenvolvimento de Sistemas** da **SPTech**.  
+O tema foi **livremente escolhido por mim** como parte da atividade individual, com o objetivo de representar quem eu sou, meus interesses e habilidades, além de demonstrar criatividade, pensamento crítico e domínio técnico.
 
-- Bem-vindo a QuikGem! Aqui, vou mostrar como o desenho animado Steven Universe se conecta com a minha vida. 
+A aplicação é inspirada na série *Steven Universe*, explorando elementos do universo da animação que se conectam com vivências pessoais, por meio de uma experiência interativa construída com tecnologias web.
 
-##  🧩 **Funcionalidades:**
+## Funcionalidades
 
-- **Quiz interativo**: Quiz interativo de conhecimento geral sobre Steven Universe — teste seus conhecimentos e descubra o quanto você realmente conhece a série!
-- **Página inicial**: Uma introdução ao mundo de *Steven Universe*, além de um espaço para os usuários se conectarem com as lições abordadas.
+- 🎯 **Quiz interativo**  
+  Perguntas sobre a série *Steven Universe*, permitindo que o usuário teste seus conhecimentos de forma dinâmica e leve.
 
-##  🎯 **Objetivos do projeto:**
+- 🏠 **Página inicial**  
+  Apresentação do projeto, introdução à série e espaço para contextualização da proposta e sua relação com temas pessoais.
 
-1. Falar um pouco melhor sobre mim e transmitir isso com o meu tema.
-2. Criar uma plataforma interativa para que os usuários se engajem com esse tema de forma divertida e reflexiva.
-3. Unir entretenimento e desenvolvimento pessoal.
+## Objetivos
 
-##  🛠️ **Tecnologias utilizadas:**
+1. ✨ Representar aspectos da minha identidade por meio de um tema com o qual me identifico.  
+2. 💡 Criar uma experiência interativa que una entretenimento, reflexão e propósito.  
+3. 🛠️ Aplicar conhecimentos técnicos de desenvolvimento web com criatividade e autonomia.
 
-### **Front-End:**
-- HTML
-- CSS
-- JavaScript
+## Tecnologias Utilizadas
 
-### **Back-End:**
+### Front-End
+- HTML5  
+- CSS  
+- JavaScript  
+
+### Back-End
 - Node.js
 
-## **Autor:**
-João Lucas Reis Carvalho
+## Autor
+
+**João Lucas Reis Carvalho**  
+Estudante de Análise e Desenvolvimento de Sistemas – SPTech
+
+---
