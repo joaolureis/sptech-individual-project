@@ -1,4 +1,4 @@
-# QuikGem – Projeto Individual
+# QuikGem – Projeto Individual - SPTech
 
 ## Sobre o Projeto
 
